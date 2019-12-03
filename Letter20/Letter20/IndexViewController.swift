@@ -15,6 +15,9 @@ class IndexViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func ImageSignLogin(_ sender: UITapGestureRecognizer) {
+        
+    }
+    
 }
 

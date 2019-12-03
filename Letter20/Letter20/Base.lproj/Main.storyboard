@@ -56,6 +56,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="urI-xg-NzO" appends="YES" id="bA5-0L-dlf"/>
+                                    <outletCollection property="gestureRecognizers" destination="urI-xg-NzO" appends="YES" id="OeY-h4-zta"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5C-hH-Nfl">
@@ -66,6 +67,9 @@
                                 <state key="normal" title="Acceder">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5U2-0F-kH1" kind="presentation" id="pZ2-fC-aIu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,9 +77,28 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="urI-xg-NzO"/>
+                <tapGestureRecognizer id="urI-xg-NzO">
+                    <connections>
+                        <action selector="ImageSignLogin:" destination="BYZ-38-t0r" id="lco-bR-VNw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xve-N9-I2o">
+            <objects>
+                <viewController id="5U2-0F-kH1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uHz-ea-g54">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EOs-SB-2rh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uh5-le-tPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="928"/>
         </scene>
     </scenes>
     <resources>
