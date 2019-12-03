@@ -12,18 +12,10 @@
 		29D1C3242396CC2E0081E837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3222396CC2E0081E837 /* Main.storyboard */; };
 		29D1C3262396CC2F0081E837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3252396CC2F0081E837 /* Assets.xcassets */; };
 		29D1C3292396CC2F0081E837 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3272396CC2F0081E837 /* LaunchScreen.storyboard */; };
-		29D1C3342396CC2F0081E837 /* Letter20Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3332396CC2F0081E837 /* Letter20Tests.swift */; };
 		29D1C33F2396CC2F0081E837 /* Letter20UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C33E2396CC2F0081E837 /* Letter20UITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29D1C3302396CC2F0081E837 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29D1C3132396CC2E0081E837 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29D1C31A2396CC2E0081E837;
-			remoteInfo = Letter20;
-		};
 		29D1C33B2396CC2F0081E837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29D1C3132396CC2E0081E837 /* Project object */;
@@ -41,7 +33,6 @@
 		29D1C3252396CC2F0081E837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29D1C3282396CC2F0081E837 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29D1C32A2396CC2F0081E837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29D1C32F2396CC2F0081E837 /* Letter20Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Letter20Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C3332396CC2F0081E837 /* Letter20Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter20Tests.swift; sourceTree = "<group>"; };
 		29D1C3352396CC2F0081E837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29D1C33A2396CC2F0081E837 /* Letter20UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Letter20UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,13 +42,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		29D1C3182396CC2E0081E837 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29D1C32C2396CC2F0081E837 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				29D1C31B2396CC2E0081E837 /* Letter20.app */,
-				29D1C32F2396CC2F0081E837 /* Letter20Tests.xctest */,
 				29D1C33A2396CC2F0081E837 /* Letter20UITests.xctest */,
 			);
 			name = Products;
@@ -145,24 +128,6 @@
 			productReference = 29D1C31B2396CC2E0081E837 /* Letter20.app */;
 			productType = "com.apple.product-type.application";
 		};
-		29D1C32E2396CC2F0081E837 /* Letter20Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 29D1C3462396CC2F0081E837 /* Build configuration list for PBXNativeTarget "Letter20Tests" */;
-			buildPhases = (
-				29D1C32B2396CC2F0081E837 /* Sources */,
-				29D1C32C2396CC2F0081E837 /* Frameworks */,
-				29D1C32D2396CC2F0081E837 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				29D1C3312396CC2F0081E837 /* PBXTargetDependency */,
-			);
-			name = Letter20Tests;
-			productName = Letter20Tests;
-			productReference = 29D1C32F2396CC2F0081E837 /* Letter20Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		29D1C3392396CC2F0081E837 /* Letter20UITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D1C3492396CC2F0081E837 /* Build configuration list for PBXNativeTarget "Letter20UITests" */;
@@ -194,10 +159,6 @@
 					29D1C31A2396CC2E0081E837 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					29D1C32E2396CC2F0081E837 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 29D1C31A2396CC2E0081E837;
-					};
 					29D1C3392396CC2F0081E837 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 29D1C31A2396CC2E0081E837;
@@ -218,7 +179,6 @@
 			projectRoot = "";
 			targets = (
 				29D1C31A2396CC2E0081E837 /* Letter20 */,
-				29D1C32E2396CC2F0081E837 /* Letter20Tests */,
 				29D1C3392396CC2F0081E837 /* Letter20UITests */,
 			);
 		};
@@ -232,13 +192,6 @@
 				29D1C3292396CC2F0081E837 /* LaunchScreen.storyboard in Resources */,
 				29D1C3262396CC2F0081E837 /* Assets.xcassets in Resources */,
 				29D1C3242396CC2E0081E837 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29D1C32D2396CC2F0081E837 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29D1C32B2396CC2F0081E837 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29D1C3342396CC2F0081E837 /* Letter20Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		29D1C3362396CC2F0081E837 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,11 +225,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29D1C3312396CC2F0081E837 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 29D1C31A2396CC2E0081E837 /* Letter20 */;
-			targetProxy = 29D1C3302396CC2F0081E837 /* PBXContainerItemProxy */;
-		};
 		29D1C33C2396CC2F0081E837 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 29D1C31A2396CC2E0081E837 /* Letter20 */;
@@ -462,46 +402,6 @@
 			};
 			name = Release;
 		};
-		29D1C3472396CC2F0081E837 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Letter20Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ual.es.Letter20Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Letter20.app/Letter20";
-			};
-			name = Debug;
-		};
-		29D1C3482396CC2F0081E837 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Letter20Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ual.es.Letter20Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Letter20.app/Letter20";
-			};
-			name = Release;
-		};
 		29D1C34A2396CC2F0081E837 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -557,15 +457,6 @@
 			buildConfigurations = (
 				29D1C3442396CC2F0081E837 /* Debug */,
 				29D1C3452396CC2F0081E837 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		29D1C3462396CC2F0081E837 /* Build configuration list for PBXNativeTarget "Letter20Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				29D1C3472396CC2F0081E837 /* Debug */,
-				29D1C3482396CC2F0081E837 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
