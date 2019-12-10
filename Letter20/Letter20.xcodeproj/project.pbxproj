@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2966B8FE239FF91F00D89A14 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2966B8FD239FF91F00D89A14 /* ClassTableViewCell.swift */; };
+		2966B90223A0093100D89A14 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2966B90123A0093100D89A14 /* MenuViewController.swift */; };
 		29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
 		29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* IndexViewController.swift */; };
 		29D1C3242396CC2E0081E837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3222396CC2E0081E837 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2966B8FD239FF91F00D89A14 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
+		2966B90123A0093100D89A14 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		29D1C31B2396CC2E0081E837 /* Letter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C31E2396CC2E0081E837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29D1C3202396CC2E0081E837 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			children = (
 				29D1C31E2396CC2E0081E837 /* AppDelegate.swift */,
 				29D1C3222396CC2E0081E837 /* Main.storyboard */,
+				2966B90123A0093100D89A14 /* MenuViewController.swift */,
+				2966B8FD239FF91F00D89A14 /* ClassTableViewCell.swift */,
 				29D1C3202396CC2E0081E837 /* IndexViewController.swift */,
 				29D1C3252396CC2F0081E837 /* Assets.xcassets */,
 				29D1C3272396CC2F0081E837 /* LaunchScreen.storyboard */,
@@ -211,6 +217,8 @@
 			files = (
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,
 				29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */,
+				2966B8FE239FF91F00D89A14 /* ClassTableViewCell.swift in Sources */,
+				2966B90223A0093100D89A14 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
