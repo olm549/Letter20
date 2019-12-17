@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		294C628623A948D200409B35 /* ModViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294C628523A948D200409B35 /* ModViewController.swift */; };
 		29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
 		29D1C3212396CC2E0081E837 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* StudentViewController.swift */; };
 		29D1C3242396CC2E0081E837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3222396CC2E0081E837 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		294C628523A948D200409B35 /* ModViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModViewController.swift; sourceTree = "<group>"; };
 		29D1C31B2396CC2E0081E837 /* Letter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C31E2396CC2E0081E837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29D1C3202396CC2E0081E837 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				29FE2047239FF653008F724D /* StudentsTableViewController.swift */,
 				29FE2049239FF6D1008F724D /* StudentsTableViewCell.swift */,
 				29FE204B239FFA77008F724D /* Student.swift */,
+				294C628523A948D200409B35 /* ModViewController.swift */,
 			);
 			path = Letter20;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				29FE2048239FF653008F724D /* StudentsTableViewController.swift in Sources */,
 				29D1C3212396CC2E0081E837 /* StudentViewController.swift in Sources */,
 				29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */,
+				294C628623A948D200409B35 /* ModViewController.swift in Sources */,
 				29FE204C239FFA77008F724D /* Student.swift in Sources */,
 				29FE204A239FF6D1008F724D /* StudentsTableViewCell.swift in Sources */,
 			);

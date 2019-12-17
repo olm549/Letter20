@@ -21,8 +21,15 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
         super.viewDidLoad()
         nameTF.delegate = self
         ageTF.delegate = self
-        guardarBtn.isEnabled = false
         imageView.makeRounded()
+        if student == nil{
+            guardarBtn.isEnabled = false
+        }else{
+            guardarBtn.isEnabled = true
+            nameTF.text = student?.nameS
+            imageView.image = student?.imageS
+            ageTF.text = student?.ageS
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 

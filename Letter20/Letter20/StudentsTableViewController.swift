@@ -60,6 +60,28 @@ class StudentsTableViewController: UITableViewController {
         let newIndexPath:IndexPath = IndexPath(row: students.count-1, section:0)
         tableView.insertRows(at: [newIndexPath], with: .bottom)
     }
+ 
+    
+    /*@IBAction func updateTable(sender: UIStoryboardSegue){
+        let student : Student = (sender.source as! StudentViewController).student!
+        let filaSeleccionada = tableView.indexPathForSelectedRow
+        if filaSeleccionada == nil{
+            addNewStudent(student: student)
+        }else{
+            updateStudent(student: student, idFila: filaSeleccionada!)
+        }
+    }
+    func addNewStudent(student: Student){
+        students.append(student)
+        let newIndexPath: IndexPath = IndexPath(row: students.count-1, section: 0)
+        tableView.insertRows(at: [newIndexPath], with: .bottom)
+    }
+    
+    func updateStudent(student: Student, idFila: IndexPath){
+        students[idFila.row] = student
+        tableView.reloadRows(at: [idFila], with: .fade)
+    }
+ */
     
 
     /*
@@ -69,13 +91,33 @@ class StudentsTableViewController: UITableViewController {
         return true
     }
     */
+    
+    
+    
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier != "addStudent" {return}
 
+        let selectedRow = tableView.indexPath(for: sender as! StudentsTableViewCell)?.row
+        let viewDestiny = segue.destination as! StudentViewController
+        viewDestiny.student = students[selectedRow!]
+        
+
+    }
+ */
+
+    
     
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle != .delete {return}
-        students.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        
+        let studentViewController = storyboard?.instantiateViewController(withIdentifier: "mod") as! ModViewController
+        studentViewController.modalPresentationStyle = .overCurrentContext
+        self.present(studentViewController, animated: true, completion: nil)
+       // StudentViewController.student = students[indexPath.row]
+        
         
     }
     
@@ -87,9 +129,12 @@ class StudentsTableViewController: UITableViewController {
     
     override func tableView (_ tableView: UITableView,
                              titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) ->
-        String? { return "Eliminar" }   
+        String? { return "Modificar/Eliminar" }
 
 
+  
+
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
