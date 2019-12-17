@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SFC-8g-KHv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -456,7 +456,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Guardar" id="eiS-Fa-He8">
                             <connections>
-                                <segue destination="qHe-c7-5n8" kind="unwind" unwindAction="addNewStudentWithSender:" id="KEf-CE-KaI"/>
+                                <segue destination="qHe-c7-5n8" kind="unwind" unwindAction="addNewStudentWithSender:" id="29c-iC-7O7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -548,7 +548,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0E-cW-Hui" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XLA-lK-NaJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3782" y="1066"/>
+            <point key="canvasLocation" x="1721" y="206"/>
         </scene>
         <!--Alumnos-->
         <scene sceneID="SQF-RE-XCw">
@@ -617,7 +617,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boU-6x-19J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="1030"/>
+            <point key="canvasLocation" x="950" y="1066"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ywP-Ix-Cdl">
@@ -654,7 +654,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cny-cT-rM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="1066"/>
+            <point key="canvasLocation" x="1721" y="954"/>
         </scene>
     </scenes>
     <resources>
@@ -665,6 +665,7 @@
         <image name="logout" width="640" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RSM-by-RIE"/>
+        <segue reference="K4c-Cb-82Q"/>
+        <segue reference="Zpk-5W-usC"/>
     </inferredMetricsTieBreakers>
 </document>
