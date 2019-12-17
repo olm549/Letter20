@@ -18,7 +18,7 @@ class LoginPopUpViewController: UIViewController {
         signAlert.layer.borderWidth = 2
         signAlert.layer.borderColor = UIColor.black.cgColor
         cancelButton.layer.borderColor = UIColor.black.cgColor
-        cancelButton.layer.borderWidth = 2
+            cancelButton.layer.borderWidth = 2
         signText.layer.borderColor = UIColor.black.cgColor
         signText.layer.borderWidth = 2
         view?.backgroundColor = UIColor(white: 0, alpha: 0.5)
