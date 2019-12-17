@@ -12,40 +12,43 @@ class ClassTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.rowHeight = 90
+        students.append("jaun")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    var students = [String]()
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return students.count
     }
+    
     @IBAction func addNuevaClase(sender: UIStoryboardSegue){
     }
+    
     @IBAction func volver(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ClassTableViewCell", for: indexPath) as! ClassTableViewCell
+        cell.className.text = "pepe"
+        cell.classImage.image = #imageLiteral(resourceName: "logout")
+        cell.accessoryType = .disclosureIndicator
+        
+        cell.classImage.makeRounded()
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29A5BFA023A933A90089D178 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BF9F23A933A90089D178 /* ClassTableViewCell.swift */; };
 		29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA123A933D10089D178 /* MenuViewController.swift */; };
 		29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA323A937C00089D178 /* LogoutController.swift */; };
 		29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
@@ -17,6 +16,7 @@
 		29A5BFB023A9545B0089D178 /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */; };
 		29A5BFB223A9547C0089D178 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */; };
 		29A5BFB423A954A80089D178 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB323A954A80089D178 /* StudentViewController.swift */; };
+		29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */; };
 		29C21228239FEFE6005F1FD8 /* LoginPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */; };
 		29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
 		29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* IndexViewController.swift */; };
@@ -36,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		29A5BF9F23A933A90089D178 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		29A5BFA123A933D10089D178 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		29A5BFA323A937C00089D178 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 		29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AniadirClaseViewController.swift; path = ../AniadirClaseViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewCell.swift; sourceTree = "<group>"; };
 		29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		29A5BFB323A954A80089D178 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassTableViewCell.swift; path = ../ClassTableViewCell.swift; sourceTree = "<group>"; };
 		29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUpController.swift; sourceTree = "<group>"; };
 		29D1C31B2396CC2E0081E837 /* Letter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C31E2396CC2E0081E837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		29D1C31D2396CC2E0081E837 /* Letter20 */ = {
 			isa = PBXGroup;
 			children = (
+				29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */,
 				29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */,
 				29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */,
 				29A5BFAB23A954060089D178 /* ModViewController.swift */,
@@ -113,7 +114,6 @@
 				29D1C3252396CC2F0081E837 /* Assets.xcassets */,
 				29D1C32A2396CC2F0081E837 /* Info.plist */,
 				29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */,
-				29A5BF9F23A933A90089D178 /* ClassTableViewCell.swift */,
 				29A5BFA123A933D10089D178 /* MenuViewController.swift */,
 				29A5BFB323A954A80089D178 /* StudentViewController.swift */,
 			);
@@ -238,11 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29A5BFA023A933A90089D178 /* ClassTableViewCell.swift in Sources */,
 				29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */,
 				29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */,
 				29A5BFB223A9547C0089D178 /* StudentsTableViewController.swift in Sources */,
 				29A5BFAE23A9543B0089D178 /* Student.swift in Sources */,
+				29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */,
 				29A5BFAC23A954060089D178 /* ModViewController.swift in Sources */,
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,
 				29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */,
