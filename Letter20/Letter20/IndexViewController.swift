@@ -15,6 +15,13 @@ class IndexViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBOutlet weak var signIcon: UIImageView!
+    
+    @IBAction func signIconAction(_ sender: UITapGestureRecognizer) {
+        let modalViewController = storyboard?.instantiateViewController(withIdentifier: "HuellaViewController")
+        modalViewController!.modalPresentationStyle = .overCurrentContext
+        present(modalViewController!, animated: true, completion: nil)
+    }
 }
+
 
