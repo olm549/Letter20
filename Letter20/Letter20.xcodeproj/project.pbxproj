@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A5BFA023A933A90089D178 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BF9F23A933A90089D178 /* ClassTableViewCell.swift */; };
+		29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA123A933D10089D178 /* MenuViewController.swift */; };
+		29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA323A937C00089D178 /* LogoutController.swift */; };
+		29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
+		29A5BFAA23A94DA00089D178 /* ClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */; };
 		29C21228239FEFE6005F1FD8 /* LoginPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */; };
 		29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
 		29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* IndexViewController.swift */; };
@@ -26,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29A5BF9F23A933A90089D178 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
+		29A5BFA123A933D10089D178 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		29A5BFA323A937C00089D178 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
+		29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AniadirClaseViewController.swift; path = ../AniadirClaseViewController.swift; sourceTree = "<group>"; };
+		29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewController.swift; sourceTree = "<group>"; };
 		29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUpController.swift; sourceTree = "<group>"; };
 		29D1C31B2396CC2E0081E837 /* Letter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C31E2396CC2E0081E837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,12 +90,17 @@
 		29D1C31D2396CC2E0081E837 /* Letter20 */ = {
 			isa = PBXGroup;
 			children = (
+				29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */,
 				29D1C31E2396CC2E0081E837 /* AppDelegate.swift */,
 				29D1C3222396CC2E0081E837 /* Main.storyboard */,
+				29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */,
+				29A5BFA323A937C00089D178 /* LogoutController.swift */,
 				29D1C3202396CC2E0081E837 /* IndexViewController.swift */,
 				29D1C3252396CC2F0081E837 /* Assets.xcassets */,
 				29D1C32A2396CC2F0081E837 /* Info.plist */,
 				29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */,
+				29A5BF9F23A933A90089D178 /* ClassTableViewCell.swift */,
+				29A5BFA123A933D10089D178 /* MenuViewController.swift */,
 			);
 			path = Letter20;
 			sourceTree = "<group>";
@@ -208,8 +223,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A5BFA023A933A90089D178 /* ClassTableViewCell.swift in Sources */,
+				29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */,
+				29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */,
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,
+				29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */,
 				29C21228239FEFE6005F1FD8 /* LoginPopUpController.swift in Sources */,
+				29A5BFAA23A94DA00089D178 /* ClassTableViewController.swift in Sources */,
 				29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
