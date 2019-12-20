@@ -36,6 +36,10 @@ class AniadirProfesorViewController: UIViewController {
          }
          */
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           aniadirProfesor()
+        }
+    //MARK : Método para añadir profesores
+        func aniadirProfesor(){
             guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
                     return
@@ -44,7 +48,7 @@ class AniadirProfesorViewController: UIViewController {
                 appDelegate.persistentContainer.viewContext
             let entity = NSEntityDescription.entity(forEntityName: "Profesor", in: managedContext)!
             let profesor = NSManagedObject(entity: entity,
-                                        insertInto: managedContext)
+                                           insertInto: managedContext)
             profesor.setValue(nombreTxt.text, forKey: "usuario")
             profesor.setValue(contraseniaTxt.text, forKey: "contrasenia")
             do {
@@ -52,7 +56,6 @@ class AniadirProfesorViewController: UIViewController {
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
             }
-            
         }
         
 }

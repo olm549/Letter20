@@ -7,20 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class ClassTableViewController: UITableViewController {
 
     override func viewDidLoad() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         super.viewDidLoad()
         tableView.rowHeight = 90
-        students.append("jaun")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        cargarClases()
     }
-    var students = [String]()
+    var classes = [NSManagedObject]()
+    var profesor : NSManagedObject!
 
     // MARK: - Table view data source
 
@@ -29,10 +27,12 @@ class ClassTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return students.count
+        return classes.count
     }
     
     @IBAction func addNuevaClase(sender: UIStoryboardSegue){
+        cargarClases()
+        tableView.reloadData()
     }
     
     @IBAction func volver(_ sender: UIBarButtonItem) {
@@ -41,14 +41,65 @@ class ClassTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassTableViewCell", for: indexPath) as! ClassTableViewCell
-        cell.className.text = "pepe"
-        cell.classImage.image = #imageLiteral(resourceName: "logout")
-        cell.accessoryType = .disclosureIndicator
-        
-        cell.classImage.makeRounded()
+        cell.nombreClase.text = classes[indexPath.row].value(forKey: "nombreClase") as? String
         return cell
     }
- 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+                    return
+            }
+            let managedContext =
+                appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Clase")
+            fetchRequest.predicate = NSPredicate(format: "profesorClase == %@", (profesor))
+            do{
+                let test = try managedContext.fetch(fetchRequest)
+                let objectToDelete = test[indexPath.row] as! NSManagedObject
+                managedContext.delete(objectToDelete)
+                classes.remove(at: indexPath.row)
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print("Could not save. \(error), \(error.userInfo)")
+                }
+            }catch{
+                print(error)
+            }
+            tableView.reloadData();
+        }
+        
+    }
+    //Cambio de nombre a funcionalidad Delete
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Eliminar";
+    }
+    
+    //MARK : Método de carga de clases
+    
+    func cargarClases(){
+            guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+                    return
+            }
+            
+            let managedContext =
+                appDelegate.persistentContainer.viewContext
+            
+            //2
+            let fetchRequest =
+                NSFetchRequest<NSManagedObject>(entityName: "Clase")
+            fetchRequest.predicate = NSPredicate(format: "profesorClase == %@", (profesor))
+            
+            
+            //3
+            do {
+                classes = try managedContext.fetch(fetchRequest)
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -85,14 +136,21 @@ class ClassTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "aniadirClase"){
+            let segueDestino = segue.destination as! AniadirClaseViewController
+            segueDestino.profesor = profesor
+        }
+        if(segue.identifier == "studentList"){
+            let segueDestino = segue.destination as! StudentsTableViewController
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let selectedRow = indexPath.row
+                segueDestino.profesorClase = [profesor : self.classes[selectedRow]]
+            }
+        }
     }
-    */
 
 }

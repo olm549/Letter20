@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class MenuViewController: UIViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         ClasesBtn.layer.borderColor = UIColor.black.cgColor
@@ -29,15 +33,16 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var ClasesBtn: UIButton!
     @IBOutlet weak var EstadisticasBtn: UIButton!
     @IBOutlet weak var SalirBtn: UIButton!
+    var profesor : NSManagedObject!
     
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+        if(segue.identifier == "classList"){
+            let segueDestino = segue.destination as! ClassTableViewController
+            segueDestino.profesor = profesor
+        }
      }
-     */
     
 }

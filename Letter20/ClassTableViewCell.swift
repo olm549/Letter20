@@ -20,7 +20,5 @@ class ClassTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    @IBOutlet weak var classImage: UIImageView!
-    @IBOutlet weak var className: UILabel!
+    @IBOutlet weak var nombreClase: UILabel!
 }

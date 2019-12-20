@@ -21,6 +21,7 @@ class AniadirClaseViewController: UIViewController {
     @IBOutlet weak var nombreTxt: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var guardarButton: UIButton!
+    var profesor : NSManagedObject!
     
     @IBAction func cancelar(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -41,10 +42,11 @@ class AniadirClaseViewController: UIViewController {
         }
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Liga", in: managedContext)!
+        let entity = NSEntityDescription.entity(forEntityName: "Clase", in: managedContext)!
         let clase = NSManagedObject(entity: entity,
                                    insertInto: managedContext)
         clase.setValue(nombreTxt.text, forKey: "nombreClase")
+        clase.setValue(profesor, forKey: "profesorClase")
         do {
             try managedContext.save()
         } catch let error as NSError {

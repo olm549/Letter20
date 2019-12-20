@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -14,8 +15,9 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var ageTF: UITextField!
     @IBOutlet weak var imageView: UIImageView!
-    var student: Student?
     @IBOutlet weak var guardarBtn: UIBarButtonItem!
+    var student : NSManagedObject!
+    var clase : NSManagedObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +28,9 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
             guardarBtn.isEnabled = false
         }else{
             guardarBtn.isEnabled = true
-            nameTF.text = student?.nameS
-            imageView.image = student?.imageS
-            ageTF.text = student?.ageS
+            nameTF.text = student.value(forKey: "nombreAlumno") as? String
+            //imageView.image = student?.imageS
+            //ageTF.text = student?.ageS
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -53,16 +55,11 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
     
     
     @IBAction func cancelarBtn(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+         navigationController!.popViewController(animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        student = Student(nameS: nameTF.text ?? "",
-                          imageS: imageView.image,
-                          ageS: ageTF.text ?? ""
-        )
-        
-        
+        aniadirAlumno()
     }
     
     @IBAction func addImage(_ sender: UITapGestureRecognizer) {
@@ -80,6 +77,26 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.editedImage] as? UIImage
         dismiss(animated: true, completion: nil)
+    }
+    func aniadirAlumno(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Alumno", in: managedContext)!
+        let alumno = NSManagedObject(entity: entity,
+                                    insertInto: managedContext)
+        alumno.setValue(nameTF.text, forKey: "nombreAlumno")
+        alumno.setValue(Int(ageTF.text!), forKey: "edadAlumno")
+        alumno.setValue(imageView.image?.pngData(), forKey: "fotoAlumno")
+        alumno.setValue(clase, forKey: "claseAlumno")
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     

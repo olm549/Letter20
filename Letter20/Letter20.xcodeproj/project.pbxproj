@@ -12,7 +12,6 @@
 		29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
 		29A5BFAA23A94DA00089D178 /* ClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */; };
 		29A5BFAC23A954060089D178 /* ModViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAB23A954060089D178 /* ModViewController.swift */; };
-		29A5BFAE23A9543B0089D178 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAD23A9543B0089D178 /* Student.swift */; };
 		29A5BFB023A9545B0089D178 /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */; };
 		29A5BFB223A9547C0089D178 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */; };
 		29A5BFB423A954A80089D178 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB323A954A80089D178 /* StudentViewController.swift */; };
@@ -43,7 +42,6 @@
 		29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AniadirClaseViewController.swift; path = ../AniadirClaseViewController.swift; sourceTree = "<group>"; };
 		29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewController.swift; sourceTree = "<group>"; };
 		29A5BFAB23A954060089D178 /* ModViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModViewController.swift; sourceTree = "<group>"; };
-		29A5BFAD23A9543B0089D178 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewCell.swift; sourceTree = "<group>"; };
 		29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		29A5BFB323A954A80089D178 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */,
 				29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */,
 				29A5BFAB23A954060089D178 /* ModViewController.swift */,
-				29A5BFAD23A9543B0089D178 /* Student.swift */,
 				29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */,
 				29D1C31E2396CC2E0081E837 /* AppDelegate.swift */,
 				29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */,
@@ -247,7 +244,6 @@
 				29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */,
 				29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */,
 				29A5BFB223A9547C0089D178 /* StudentsTableViewController.swift in Sources */,
-				29A5BFAE23A9543B0089D178 /* Student.swift in Sources */,
 				29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */,
 				29A5BFAC23A954060089D178 /* ModViewController.swift in Sources */,
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,

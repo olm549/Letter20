@@ -7,17 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
-var students = [Student]()
+
 
 class StudentsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 90
-        let ejemplo = Student(nameS: "Weka", imageS: #imageLiteral(resourceName: "fondo_estad"), ageS: "8")
-        students += [ejemplo!]
-        
+        cargarAlumnos()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -25,44 +23,37 @@ class StudentsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    var students = [NSManagedObject]()
+    var profesorClase = [NSManagedObject : NSManagedObject]()
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return students.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentsTableViewCell", for: indexPath) as! StudentsTableViewCell
-        cell.nameS.text = students[indexPath.row].nameS
-        cell.imageS.image = students[indexPath.row].imageS
-        cell.ageS.text = students[indexPath.row].ageS
-        cell.accessoryType = .disclosureIndicator
-        
-        cell.imageS.makeRounded()
+        cell.nameS.text = students[indexPath.row].value(forKey: "nombreAlumno") as? String
+        cell.ageS.text = students[indexPath.row].value(forKey: "edadAlumno") as? String
+        if let imageData = students[indexPath.row].value(forKey: "fotoAlumno") as? Data{
+            let image = UIImage(data : imageData)
+            cell.imageS.image = image
+            cell.imageS.makeRounded()
+        }
         return cell
-        
     }
     
     
     @IBAction func addNewStudent (sender: UIStoryboardSegue){
-        let sourceViewController = sender.source as! StudentViewController
         
-        let newStudent = sourceViewController.student
-        
-        students.append(newStudent!)
-        let newIndexPath:IndexPath = IndexPath(row: students.count-1, section:0)
-        tableView.insertRows(at: [newIndexPath], with: .bottom)
     }
     
     
-    /*@IBAction func updateTable(sender: UIStoryboardSegue){
+   /* @IBAction func updateTable(sender: UIStoryboardSegue){
      let student : Student = (sender.source as! StudentViewController).student!
      let filaSeleccionada = tableView.indexPathForSelectedRow
      if filaSeleccionada == nil{
@@ -81,8 +72,8 @@ class StudentsTableViewController: UITableViewController {
      students[idFila.row] = student
      tableView.reloadRows(at: [idFila], with: .fade)
      }
-     */
     
+    */
     
     /*
      // Override to support conditional editing of the table view.
@@ -94,16 +85,35 @@ class StudentsTableViewController: UITableViewController {
     
     
     
-    /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-     if segue.identifier != "addStudent" {return}
-     
-     let selectedRow = tableView.indexPath(for: sender as! StudentsTableViewCell)?.row
-     let viewDestiny = segue.destination as! StudentViewController
-     viewDestiny.student = students[selectedRow!]
-     
-     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "addStudent" {
+            let viewDestiny = segue.destination as! StudentViewController
+            viewDestiny.clase = profesorClase.popFirst()?.value
+        }
      }
-     */
+    func cargarAlumnos(){
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Alumno")
+        fetchRequest.predicate = NSPredicate(format: "claseAlumno == %@", ((profesorClase.popFirst()?.value)!))
+        
+        
+        //3
+        do {
+            students = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
     
     
     

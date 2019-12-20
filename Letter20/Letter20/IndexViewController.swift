@@ -10,7 +10,10 @@ import UIKit
 import CoreData
 
 class IndexViewController: UIViewController {
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +22,7 @@ class IndexViewController: UIViewController {
     @IBOutlet weak var signIcon: UIImageView!
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    var usuariosFetch : [NSManagedObject] = []
+    var usuario : NSManagedObject!
     var boolLogin = false
     
     @IBAction func signIconAction(_ sender: UITapGestureRecognizer) {
@@ -30,7 +33,6 @@ class IndexViewController: UIViewController {
     }
     @IBAction func login(_ sender: UIButton) {
         fetchProfesores()
-        checkFetchCount()
         if(boolLogin == false){
             let modalViewController = storyboard?.instantiateViewController(withIdentifier: "LoginPopUpViewController") as! LoginPopUpViewController
             modalViewController.modalPresentationStyle = .overCurrentContext
@@ -40,13 +42,6 @@ class IndexViewController: UIViewController {
             performSegue(withIdentifier: "loginIsRight", sender: UIButton())
         }
         
-    }
-    func checkFetchCount(){
-        if(usuariosFetch.count == 0){
-            boolLogin = false
-        }else{
-            boolLogin = true
-        }
     }
     func fetchProfesores(){
         guard let appDelegate =
@@ -61,17 +56,34 @@ class IndexViewController: UIViewController {
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Profesor")
         fetchRequest.predicate = NSPredicate(format: "usuario == %@ AND contrasenia == %@", userNameField.text!,passwordField.text!)
-        
-        
-        //3
+      
         do {
-            usuariosFetch = try managedContext.fetch(fetchRequest)
+            var fetch = try managedContext.fetch(fetchRequest)
+            if(fetch.count == 0){
+                boolLogin = false
+                return;
+            }else{
+                boolLogin = true
+                //3
+                usuario = fetch[0]
+            }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
+    //MARK: - Segue desde addProfesor
     @IBAction func addNewProfesor (sender: UIStoryboardSegue){
     }
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "loginIsRight"){
+                let segueDestino = segue.destination as! MenuViewController
+                segueDestino.profesor = usuario
+            }
+        }
+    
 }
 
 
