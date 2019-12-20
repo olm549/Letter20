@@ -18,6 +18,7 @@
 		29A5BFB423A954A80089D178 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB323A954A80089D178 /* StudentViewController.swift */; };
 		29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */; };
 		29AC27CB23ACC7E6000BBF84 /* Letter20.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */; };
+		29AC27CD23ACD4DF000BBF84 /* AniadirProfesorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */; };
 		29C21228239FEFE6005F1FD8 /* LoginPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */; };
 		29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
 		29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* IndexViewController.swift */; };
@@ -48,6 +49,7 @@
 		29A5BFB323A954A80089D178 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassTableViewCell.swift; path = ../ClassTableViewCell.swift; sourceTree = "<group>"; };
 		29AC27CA23ACC7E6000BBF84 /* Letter20.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Letter20.xcdatamodel; sourceTree = "<group>"; };
+		29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniadirProfesorViewController.swift; sourceTree = "<group>"; };
 		29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUpController.swift; sourceTree = "<group>"; };
 		29D1C31B2396CC2E0081E837 /* Letter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C31E2396CC2E0081E837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				29D1C31E2396CC2E0081E837 /* AppDelegate.swift */,
 				29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */,
 				29D1C3222396CC2E0081E837 /* Main.storyboard */,
+				29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */,
 				29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */,
 				29A5BFA323A937C00089D178 /* LogoutController.swift */,
 				29D1C3202396CC2E0081E837 /* IndexViewController.swift */,
@@ -250,6 +253,7 @@
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,
 				29AC27CB23ACC7E6000BBF84 /* Letter20.xcdatamodeld in Sources */,
 				29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */,
+				29AC27CD23ACD4DF000BBF84 /* AniadirProfesorViewController.swift in Sources */,
 				29C21228239FEFE6005F1FD8 /* LoginPopUpController.swift in Sources */,
 				29A5BFAA23A94DA00089D178 /* ClassTableViewController.swift in Sources */,
 				29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AniadirClaseViewController: UIViewController {
 
@@ -33,5 +34,23 @@ class AniadirClaseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Liga", in: managedContext)!
+        let clase = NSManagedObject(entity: entity,
+                                   insertInto: managedContext)
+        clase.setValue(nombreTxt.text, forKey: "nombreClase")
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+    }
 
 }
