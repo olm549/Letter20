@@ -17,13 +17,33 @@
 		29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA323A937C00089D178 /* LogoutController.swift */; };
 		29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
 		29A5BFAA23A94DA00089D178 /* ClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */; };
-		29A5BFAC23A954060089D178 /* ModViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAB23A954060089D178 /* ModViewController.swift */; };
 		29A5BFB023A9545B0089D178 /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */; };
 		29A5BFB223A9547C0089D178 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */; };
 		29A5BFB423A954A80089D178 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB323A954A80089D178 /* StudentViewController.swift */; };
 		29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */; };
 		29AC27CB23ACC7E6000BBF84 /* Letter20.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */; };
 		29AC27CD23ACD4DF000BBF84 /* AniadirProfesorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */; };
+		29BE70C923C4FAB70080BC96 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA123A933D10089D178 /* MenuViewController.swift */; };
+		29BE70CA23C4FAB70080BC96 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
+		29BE70CB23C4FAB70080BC96 /* ExperimentosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6F23C4A51E0059560A /* ExperimentosTableViewCell.swift */; };
+		29BE70CC23C4FAB70080BC96 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */; };
+		29BE70CD23C4FAB70080BC96 /* LetrasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6723C48D050059560A /* LetrasTableViewController.swift */; };
+		29BE70CE23C4FAB70080BC96 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */; };
+		29BE70CF23C4FAB70080BC96 /* ExperimentosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B7123C4A6690059560A /* ExperimentosTableViewController.swift */; };
+		29BE70D123C4FAB70080BC96 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* IndexViewController.swift */; };
+		29BE70D223C4FAB70080BC96 /* Letter20.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */; };
+		29BE70D323C4FAB70080BC96 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA323A937C00089D178 /* LogoutController.swift */; };
+		29BE70D423C4FAB70080BC96 /* AniadirProfesorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */; };
+		29BE70D523C4FAB70080BC96 /* LoginPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */; };
+		29BE70D623C4FAB70080BC96 /* ClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */; };
+		29BE70D723C4FAB70080BC96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
+		29BE70D823C4FAB70080BC96 /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */; };
+		29BE70D923C4FAB70080BC96 /* AniadirExperimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B7323C4B02D0059560A /* AniadirExperimentoViewController.swift */; };
+		29BE70DA23C4FAB70080BC96 /* ResultadoExperimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B7523C4B2710059560A /* ResultadoExperimentoViewController.swift */; };
+		29BE70DB23C4FAB70080BC96 /* LetraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6D23C4A0470059560A /* LetraTableViewCell.swift */; };
+		29BE70DC23C4FAB70080BC96 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB323A954A80089D178 /* StudentViewController.swift */; };
+		29BE70DF23C4FAB70080BC96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3252396CC2F0081E837 /* Assets.xcassets */; };
+		29BE70E023C4FAB70080BC96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D1C3222396CC2E0081E837 /* Main.storyboard */; };
 		29C21228239FEFE6005F1FD8 /* LoginPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */; };
 		29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C31E2396CC2E0081E837 /* AppDelegate.swift */; };
 		29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1C3202396CC2E0081E837 /* IndexViewController.swift */; };
@@ -53,13 +73,14 @@
 		29A5BFA323A937C00089D178 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 		29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AniadirClaseViewController.swift; path = ../AniadirClaseViewController.swift; sourceTree = "<group>"; };
 		29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewController.swift; sourceTree = "<group>"; };
-		29A5BFAB23A954060089D178 /* ModViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModViewController.swift; sourceTree = "<group>"; };
 		29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewCell.swift; sourceTree = "<group>"; };
 		29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		29A5BFB323A954A80089D178 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassTableViewCell.swift; path = ../ClassTableViewCell.swift; sourceTree = "<group>"; };
 		29AC27CA23ACC7E6000BBF84 /* Letter20.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Letter20.xcdatamodel; sourceTree = "<group>"; };
 		29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniadirProfesorViewController.swift; sourceTree = "<group>"; };
+		29BE70E423C4FAB70080BC96 /* Letter20v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BE70E523C4FAB70080BC96 /* Letter20 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Letter20 copy-Info.plist"; path = "/Users/aula11/Documents/Letter20/Letter20/Letter20 copy-Info.plist"; sourceTree = "<absolute>"; };
 		29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUpController.swift; sourceTree = "<group>"; };
 		29D1C31B2396CC2E0081E837 /* Letter20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D1C31E2396CC2E0081E837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		29BE70DD23C4FAB70080BC96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D1C3182396CC2E0081E837 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,6 +127,7 @@
 				29D1C3322396CC2F0081E837 /* Letter20Tests */,
 				29D1C33D2396CC2F0081E837 /* Letter20UITests */,
 				29D1C31C2396CC2E0081E837 /* Products */,
+				29BE70E523C4FAB70080BC96 /* Letter20 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +136,7 @@
 			children = (
 				29D1C31B2396CC2E0081E837 /* Letter20.app */,
 				29D1C33A2396CC2F0081E837 /* Letter20UITests.xctest */,
+				29BE70E423C4FAB70080BC96 /* Letter20v2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,7 +148,6 @@
 				29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */,
 				29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */,
 				29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */,
-				29A5BFAB23A954060089D178 /* ModViewController.swift */,
 				29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */,
 				29D1C31E2396CC2E0081E837 /* AppDelegate.swift */,
 				29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */,
@@ -162,6 +191,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		29BE70C723C4FAB70080BC96 /* Letter20v2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29BE70E123C4FAB70080BC96 /* Build configuration list for PBXNativeTarget "Letter20v2" */;
+			buildPhases = (
+				29BE70C823C4FAB70080BC96 /* Sources */,
+				29BE70DD23C4FAB70080BC96 /* Frameworks */,
+				29BE70DE23C4FAB70080BC96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Letter20v2;
+			productName = Letter20;
+			productReference = 29BE70E423C4FAB70080BC96 /* Letter20v2.app */;
+			productType = "com.apple.product-type.application";
+		};
 		29D1C31A2396CC2E0081E837 /* Letter20 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D1C3432396CC2F0081E837 /* Build configuration list for PBXNativeTarget "Letter20" */;
@@ -231,11 +277,21 @@
 			targets = (
 				29D1C31A2396CC2E0081E837 /* Letter20 */,
 				29D1C3392396CC2F0081E837 /* Letter20UITests */,
+				29BE70C723C4FAB70080BC96 /* Letter20v2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		29BE70DE23C4FAB70080BC96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29BE70DF23C4FAB70080BC96 /* Assets.xcassets in Resources */,
+				29BE70E023C4FAB70080BC96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D1C3192396CC2E0081E837 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +311,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29BE70C823C4FAB70080BC96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29BE70C923C4FAB70080BC96 /* MenuViewController.swift in Sources */,
+				29BE70CA23C4FAB70080BC96 /* AniadirClaseViewController.swift in Sources */,
+				29BE70CB23C4FAB70080BC96 /* ExperimentosTableViewCell.swift in Sources */,
+				29BE70CC23C4FAB70080BC96 /* StudentsTableViewController.swift in Sources */,
+				29BE70CD23C4FAB70080BC96 /* LetrasTableViewController.swift in Sources */,
+				29BE70CE23C4FAB70080BC96 /* ClassTableViewCell.swift in Sources */,
+				29BE70CF23C4FAB70080BC96 /* ExperimentosTableViewController.swift in Sources */,
+				29BE70D123C4FAB70080BC96 /* IndexViewController.swift in Sources */,
+				29BE70D223C4FAB70080BC96 /* Letter20.xcdatamodeld in Sources */,
+				29BE70D323C4FAB70080BC96 /* LogoutController.swift in Sources */,
+				29BE70D423C4FAB70080BC96 /* AniadirProfesorViewController.swift in Sources */,
+				29BE70D523C4FAB70080BC96 /* LoginPopUpController.swift in Sources */,
+				29BE70D623C4FAB70080BC96 /* ClassTableViewController.swift in Sources */,
+				29BE70D723C4FAB70080BC96 /* AppDelegate.swift in Sources */,
+				29BE70D823C4FAB70080BC96 /* StudentsTableViewCell.swift in Sources */,
+				29BE70D923C4FAB70080BC96 /* AniadirExperimentoViewController.swift in Sources */,
+				29BE70DA23C4FAB70080BC96 /* ResultadoExperimentoViewController.swift in Sources */,
+				29BE70DB23C4FAB70080BC96 /* LetraTableViewCell.swift in Sources */,
+				29BE70DC23C4FAB70080BC96 /* StudentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D1C3172396CC2E0081E837 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,7 +348,6 @@
 				295D8B6823C48D050059560A /* LetrasTableViewController.swift in Sources */,
 				29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */,
 				295D8B7223C4A6690059560A /* ExperimentosTableViewController.swift in Sources */,
-				29A5BFAC23A954060089D178 /* ModViewController.swift in Sources */,
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,
 				29AC27CB23ACC7E6000BBF84 /* Letter20.xcdatamodeld in Sources */,
 				29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */,
@@ -312,6 +393,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		29BE70E223C4FAB70080BC96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Letter20 copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.es.Letter20;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Letter20v2;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29BE70E323C4FAB70080BC96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Letter20 copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.es.Letter20;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Letter20v2;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		29D1C3412396CC2F0081E837 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,6 +620,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		29BE70E123C4FAB70080BC96 /* Build configuration list for PBXNativeTarget "Letter20v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29BE70E223C4FAB70080BC96 /* Debug */,
+				29BE70E323C4FAB70080BC96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29D1C3162396CC2E0081E837 /* Build configuration list for PBXProject "Letter20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

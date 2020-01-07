@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,9 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         self.picker.delegate = self
         self.picker.dataSource = self
         picker.isHidden = true
-        picker.isOpaque = true
+        picker.layer.borderColor = UIColor.black.cgColor
+        picker.layer.borderWidth = 2
+        picker.layer.backgroundColor = UIColor.orange.withAlphaComponent(0.4).cgColor
         // Do any additional setup after loading the view.
     }
     // MARK: Atributos
@@ -53,29 +55,54 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         switch fieldValue{
         case 0:
             self.x2barText.text = pickerData[row]
+            y2barText.becomeFirstResponder()
+            x2barText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
         case 1:
             self.y2barText.text = pickerData[row]
+            x2ybrText.becomeFirstResponder()
+            y2barText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
         case 2:
             self.x2ybrText.text = pickerData[row]
+            xy2brText.becomeFirstResponder()
+            x2ybrText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
         case 3:
             self.xy2brText.text = pickerData[row]
-        case 5:
+            xegeText.becomeFirstResponder()
+            xy2brText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
+        case 4:
             self.xegeText.text = pickerData[row]
-        case 6:
+            yegeText.becomeFirstResponder()
+            xegeText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
+        case 5:
             self.yegeText.text = pickerData[row]
-        case 7:
+            xegvyText.becomeFirstResponder()
+            yegeText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
+        case 6:
             self.xegvyText.text = pickerData[row]
-        case 8:
+            yegvxText.becomeFirstResponder()
+            xegvyText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
+        case 7:
             self.yegvxText.text = pickerData[row]
-        case 9:
+            xybarText.becomeFirstResponder()
+            yegvxText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+
+        case 8:
             self.xybarText.text = pickerData[row]
+            xybarText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+            picker.isHidden = true
+
         case .none:
             self.x2barText.text = pickerData[row]
         case .some(_):
             self.x2barText.text = pickerData[row]
         }
         
-        picker.isHidden = true
     }
     
     // MARK: - Navigation
@@ -90,7 +117,7 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
 
     }
     
-    @IBAction func activarPicker(_ sender: UITextField) {
+    @IBAction func sendTag(_ sender: UITextField) {
         picker.isHidden = false
         fieldValue = sender.tag
     }
