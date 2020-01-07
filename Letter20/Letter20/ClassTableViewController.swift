@@ -53,7 +53,7 @@ class ClassTableViewController: UITableViewController {
             let managedContext =
                 appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Clase")
-            fetchRequest.predicate = NSPredicate(format: "profesorClase == %@", (profesor))
+            fetchRequest.predicate = NSPredicate(format: "profesor == %@", (profesor))
             do{
                 let test = try managedContext.fetch(fetchRequest)
                 let objectToDelete = test[indexPath.row] as! NSManagedObject
@@ -148,7 +148,9 @@ class ClassTableViewController: UITableViewController {
             let segueDestino = segue.destination as! StudentsTableViewController
             if let indexPath = tableView.indexPathForSelectedRow{
                 let selectedRow = indexPath.row
-                segueDestino.profesorClase = [profesor : self.classes[selectedRow]]
+                //segueDestino.profesorClase = [profesor : self.classes[selectedRow]]
+                segueDestino.profesor = profesor
+                segueDestino.clase = self.classes[selectedRow]
             }
         }
     }

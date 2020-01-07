@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295D8B6823C48D050059560A /* LetrasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6723C48D050059560A /* LetrasTableViewController.swift */; };
+		295D8B6E23C4A0470059560A /* LetraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6D23C4A0470059560A /* LetraTableViewCell.swift */; };
+		295D8B7023C4A51E0059560A /* ExperimentosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6F23C4A51E0059560A /* ExperimentosTableViewCell.swift */; };
+		295D8B7223C4A6690059560A /* ExperimentosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B7123C4A6690059560A /* ExperimentosTableViewController.swift */; };
+		295D8B7423C4B02D0059560A /* AniadirExperimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B7323C4B02D0059560A /* AniadirExperimentoViewController.swift */; };
+		295D8B7623C4B2710059560A /* ResultadoExperimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B7523C4B2710059560A /* ResultadoExperimentoViewController.swift */; };
 		29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA123A933D10089D178 /* MenuViewController.swift */; };
 		29A5BFA423A937C00089D178 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA323A937C00089D178 /* LogoutController.swift */; };
 		29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
@@ -37,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		295D8B6723C48D050059560A /* LetrasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetrasTableViewController.swift; sourceTree = "<group>"; };
+		295D8B6D23C4A0470059560A /* LetraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetraTableViewCell.swift; sourceTree = "<group>"; };
+		295D8B6F23C4A51E0059560A /* ExperimentosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentosTableViewCell.swift; sourceTree = "<group>"; };
+		295D8B7123C4A6690059560A /* ExperimentosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentosTableViewController.swift; sourceTree = "<group>"; };
+		295D8B7323C4B02D0059560A /* AniadirExperimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniadirExperimentoViewController.swift; sourceTree = "<group>"; };
+		295D8B7523C4B2710059560A /* ResultadoExperimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoExperimentoViewController.swift; sourceTree = "<group>"; };
 		29A5BFA123A933D10089D178 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		29A5BFA323A937C00089D178 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 		29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AniadirClaseViewController.swift; path = ../AniadirClaseViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +114,7 @@
 		29D1C31D2396CC2E0081E837 /* Letter20 */ = {
 			isa = PBXGroup;
 			children = (
+				295D8B6F23C4A51E0059560A /* ExperimentosTableViewCell.swift */,
 				29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */,
 				29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */,
 				29A5BFB123A9547C0089D178 /* StudentsTableViewController.swift */,
@@ -110,6 +123,11 @@
 				29D1C31E2396CC2E0081E837 /* AppDelegate.swift */,
 				29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */,
 				29D1C3222396CC2E0081E837 /* Main.storyboard */,
+				295D8B7523C4B2710059560A /* ResultadoExperimentoViewController.swift */,
+				295D8B7323C4B02D0059560A /* AniadirExperimentoViewController.swift */,
+				295D8B7123C4A6690059560A /* ExperimentosTableViewController.swift */,
+				295D8B6D23C4A0470059560A /* LetraTableViewCell.swift */,
+				295D8B6723C48D050059560A /* LetrasTableViewController.swift */,
 				29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */,
 				29A5BFA923A94DA00089D178 /* ClassTableViewController.swift */,
 				29A5BFA323A937C00089D178 /* LogoutController.swift */,
@@ -243,8 +261,11 @@
 			files = (
 				29A5BFA223A933D10089D178 /* MenuViewController.swift in Sources */,
 				29A5BFA823A94D110089D178 /* AniadirClaseViewController.swift in Sources */,
+				295D8B7023C4A51E0059560A /* ExperimentosTableViewCell.swift in Sources */,
 				29A5BFB223A9547C0089D178 /* StudentsTableViewController.swift in Sources */,
+				295D8B6823C48D050059560A /* LetrasTableViewController.swift in Sources */,
 				29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */,
+				295D8B7223C4A6690059560A /* ExperimentosTableViewController.swift in Sources */,
 				29A5BFAC23A954060089D178 /* ModViewController.swift in Sources */,
 				29D1C3212396CC2E0081E837 /* IndexViewController.swift in Sources */,
 				29AC27CB23ACC7E6000BBF84 /* Letter20.xcdatamodeld in Sources */,
@@ -254,6 +275,9 @@
 				29A5BFAA23A94DA00089D178 /* ClassTableViewController.swift in Sources */,
 				29D1C31F2396CC2E0081E837 /* AppDelegate.swift in Sources */,
 				29A5BFB023A9545B0089D178 /* StudentsTableViewCell.swift in Sources */,
+				295D8B7423C4B02D0059560A /* AniadirExperimentoViewController.swift in Sources */,
+				295D8B7623C4B2710059560A /* ResultadoExperimentoViewController.swift in Sources */,
+				295D8B6E23C4A0470059560A /* LetraTableViewCell.swift in Sources */,
 				29A5BFB423A954A80089D178 /* StudentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

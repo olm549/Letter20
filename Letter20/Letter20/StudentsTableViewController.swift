@@ -24,7 +24,8 @@ class StudentsTableViewController: UITableViewController {
     }
     
     var students = [NSManagedObject]()
-    var profesorClase = [NSManagedObject : NSManagedObject]()
+    var profesor : NSManagedObject!
+    var clase : NSManagedObject!
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,7 +39,7 @@ class StudentsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentsTableViewCell", for: indexPath) as! StudentsTableViewCell
         cell.nameS.text = students[indexPath.row].value(forKey: "nombreAlumno") as? String
-        cell.ageS.text = students[indexPath.row].value(forKey: "edadAlumno") as? String
+        cell.ageS.text = String(students[indexPath.row].value(forKey: "edadAlumno") as! Int)
         if let imageData = students[indexPath.row].value(forKey: "fotoAlumno") as? Data{
             let image = UIImage(data : imageData)
             cell.imageS.image = image
@@ -49,7 +50,8 @@ class StudentsTableViewController: UITableViewController {
     
     
     @IBAction func addNewStudent (sender: UIStoryboardSegue){
-        
+        cargarAlumnos()
+        tableView.reloadData()
     }
     
     
@@ -88,7 +90,15 @@ class StudentsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "addStudent" {
             let viewDestiny = segue.destination as! StudentViewController
-            viewDestiny.clase = profesorClase.popFirst()?.value
+            viewDestiny.clase = clase
+        }
+        if segue.identifier == "verLetras" {
+            let segueDestino = segue.destination as! LetrasTableViewController
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let selectedRow = indexPath.row
+                //segueDestino.profesorClase = [profesor : self.classes[selectedRow]
+                segueDestino.student = self.students[selectedRow]
+            }
         }
      }
     func cargarAlumnos(){
@@ -103,7 +113,7 @@ class StudentsTableViewController: UITableViewController {
         //2
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Alumno")
-        fetchRequest.predicate = NSPredicate(format: "claseAlumno == %@", ((profesorClase.popFirst()?.value)!))
+        fetchRequest.predicate = NSPredicate(format: "claseAlumno == %@", ((clase)))
         
         
         //3
@@ -120,14 +130,30 @@ class StudentsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        if editingStyle != .delete {return}
-        
-        
-        let studentViewController = storyboard?.instantiateViewController(withIdentifier: "mod") as! ModViewController
-        studentViewController.modalPresentationStyle = .overCurrentContext
-        self.present(studentViewController, animated: true, completion: nil)
-        // StudentViewController.student = students[indexPath.row]
-        
+        if editingStyle == .delete {
+            guard let appDelegate =
+                UIApplication.shared.delegate as? AppDelegate else {
+                    return
+            }
+            let managedContext =
+                appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Alumno")
+            fetchRequest.predicate = NSPredicate(format: "claseAlumno == %@", (clase))
+            do{
+                let test = try managedContext.fetch(fetchRequest)
+                let objectToDelete = test[indexPath.row] as! NSManagedObject
+                managedContext.delete(objectToDelete)
+                students.remove(at: indexPath.row)
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print("Could not save. \(error), \(error.userInfo)")
+                }
+            }catch{
+                print(error)
+            }
+            tableView.reloadData();
+        }
         
     }
     
@@ -139,7 +165,7 @@ class StudentsTableViewController: UITableViewController {
     
     override func tableView (_ tableView: UITableView,
                              titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) ->
-        String? { return "Modificar/Eliminar" }
+        String? { return "Eliminar" }
     
     
     

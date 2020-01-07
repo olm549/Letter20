@@ -21,4 +21,6 @@ class ExperimentosTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBOutlet weak var imgExperimentos: UIImageView!
+    @IBOutlet weak var fechaExperimentos: UILabel!
 }

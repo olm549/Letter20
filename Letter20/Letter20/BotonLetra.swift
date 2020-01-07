@@ -9,13 +9,27 @@
 import UIKit
 
 class BotonLetra: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    //MARK: Atributos
+    var botones: [UIButton] = [UIButton]()
+    // MARK: inicialización
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        var boton: UIButton
+        let cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for valor in cadena {
+            boton = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            boton.setTitle(String(valor), for: .normal)
+            boton.backgroundColor = UIColor.blue
+            addSubview(boton)
+            botones += [boton]
+        }
+        
     }
-    */
+    override func layoutSubviews() {
+        for (i, boton) in botones.enumerated() {
+            boton.frame.origin.x = CGFloat(i * (44 + 5))
+        }
+    }
+    
 
 }

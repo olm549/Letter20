@@ -32,7 +32,6 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
             //imageView.image = student?.imageS
             //ageTF.text = student?.ageS
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     

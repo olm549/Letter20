@@ -13,7 +13,7 @@
         <relationship name="profesorClase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Profesor" inverseName="clasesProfesor" inverseEntity="Profesor" syncable="YES"/>
     </entity>
     <entity name="Experimento" representedClassName="Experimento" syncable="YES" codeGenerationType="class">
-        <attribute name="fechaExperimento" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fechaExperimento" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="letraExperimento" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resultadoExperimento" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="alumnoExperimento" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alumno" inverseName="experimentoAlumno" inverseEntity="Alumno" syncable="YES"/>

@@ -21,4 +21,5 @@ class LetraTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBOutlet weak var labelLetra: UILabel!
 }

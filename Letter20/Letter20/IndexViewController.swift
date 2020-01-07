@@ -38,8 +38,6 @@ class IndexViewController: UIViewController {
             modalViewController.modalPresentationStyle = .overCurrentContext
             present(modalViewController, animated: true, completion: nil)
             modalViewController.signText.text = "Datos incorrectos"
-        }else{
-            performSegue(withIdentifier: "loginIsRight", sender: UIButton())
         }
         
     }

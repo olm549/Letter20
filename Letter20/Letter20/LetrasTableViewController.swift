@@ -7,40 +7,37 @@
 //
 
 import UIKit
+import CoreData
 
 class LetrasTableViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for char in letras{
+            letters.append(char)
+        }
     }
-
+    //MARK: Atributos
+    var student : NSManagedObject!
+    var letters = [Character]()
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return letters.count;
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LetraTableViewCell", for: indexPath) as! LetraTableViewCell
+        cell.labelLetra.text = "Letra \(String(letters[indexPath.row]))"
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +74,19 @@ class LetrasTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let segueDestino = segue.destination as! ExperimentosTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow{
+            let selectedRow = indexPath.row
+            //segueDestino.profesorClase = [profesor : self.classes[selectedRow]]
+            segueDestino.student = student
+            segueDestino.letter = self.letters[selectedRow]
+        }
     }
-    */
+ 
 
 }
