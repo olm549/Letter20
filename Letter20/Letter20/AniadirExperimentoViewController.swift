@@ -20,6 +20,7 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         picker.layer.borderColor = UIColor.black.cgColor
         picker.layer.borderWidth = 2
         picker.layer.backgroundColor = UIColor.orange.withAlphaComponent(0.4).cgColor
+        crearButton.isEnabled = false
         #if Letter20v2
             letraAdivinada.isHidden = true
             labelLetraAdivinada.isHidden = true
@@ -45,6 +46,7 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
     @IBOutlet weak var xybarText: UITextField!
     @IBOutlet weak var letraAdivinada: UITextField!
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var crearButton: UIBarButtonItem!
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
@@ -101,6 +103,7 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         case 8:
             self.xybarText.text = pickerData[row]
             xybarText.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+            crearButton.isEnabled = true
             picker.isHidden = true
 
         case .none:
@@ -119,15 +122,142 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         segueDestino.letter = letter
         segueDestino.student = student
         #if Letter20v2
-        segueDestino.guessedLetter = "A"
+        segueDestino.guessedLetter = calcularLetra()
         #else
         segueDestino.guessedLetter = Character(letraAdivinada.text!)
-            //segueDestino.profesorClase = [profesor : self.classes[selectedRow]]
         #endif
     }
     
     @IBAction func sendTag(_ sender: UITextField) {
         picker.isHidden = false
         fieldValue = sender.tag
+    }
+    func calcularLetra() -> Character{
+        if(Int(xegeText.text!)! <= 1){
+            if(Int(yegeText.text!)!<=4){
+                if(Int(x2ybrText.text!)!<=8){
+                    if(Int(x2ybrText.text!)!<=3){
+                        return "L"
+                    }else{
+                        if(Int(x2ybrText.text!)!<=6){
+                            return "P"
+                        }else{
+                            if(Int(xegvyText.text!)!<=7){
+                                return "J"
+                            }else{
+                                if(Int(yegeText.text!)!<=2){
+                                    return "I"
+                                }else{
+                                    return "C"
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    if(Int(x2barText.text!)!<=2){
+                        return "Y"
+                    }else{
+                        return "F"
+                    }
+                }
+            }else{
+                if(Int(x2ybrText.text!)!<=8){
+                    return "Z"
+                }else{
+                    return "E"
+                }
+            }
+        }else{
+            if(Int(yegeText.text!)!<=2){
+                if(Int(xegeText.text!)!<=3){
+                    if(Int(xegvyText.text!)!<=8){
+                        return "A"
+                    }else{
+                        if(Int(x2barText.text!)!<=4){
+                            return "V"
+                        }else{
+                            return "U"
+                        }
+                    }
+                }else{
+                    if(Int(xegvyText.text!)!<=6){
+                        return "M"
+                    }else{
+                        if(Int(x2ybrText.text!)!<=7){
+                            return "N"
+                        }else{
+                            return "W"
+                        }
+                    }
+                }
+            }else{
+                if(Int(x2ybrText.text!)!<=7){
+                    if(Int(x2ybrText.text!)!<=7){
+                        if(Int(xegvyText.text!)!<=8){
+                            if(Int(yegeText.text!)!<=4){
+                                if(Int(xegvyText.text!)!<=7){
+                                    return "R"
+                                }else{
+                                    return "D"
+                                }
+                            }else{
+                                return "B"
+                            }
+                        }else{
+                            if(Int(x2barText.text!)!<=4){
+                                return "F"
+                            }
+                            else{
+                                return "P"
+                            }
+                        }
+                    }else{
+                        return "Y"
+                    }
+                }else{
+                    if(Int(x2barText.text!)!<=4){
+                        if(Int(y2barText.text!)!<=3){
+                            return "A"
+                        }else{
+                            if(Int(xybarText.text!)!<=10){
+                                if(Int(xegeText.text!)!<=4){
+                                    if(Int(yegeText.text!)!<=5){
+                                        if(Int(y2barText.text!)!<=6){
+                                            return "X"
+                                        }else{
+                                            return "K"
+                                        }
+                                    }else{
+                                        return "X"
+                                    }
+                                }else{
+                                    return "K"
+                                }
+                            }else{
+                                return "E"
+                            }
+                        }
+                    }else{
+                        if(Int(yegvxText.text!)!<=8){
+                            if(Int(yegeText.text!)!<=5){
+                                return "O"
+                            }else{
+                                return "Q"
+                            }
+                        }else{
+                            if(Int(x2ybrText.text!)!<=5){
+                                return "R"
+                            }else{
+                                if(Int(xegeText.text!)!<=2){
+                                    return "G"
+                                }else{
+                                    return "Q"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

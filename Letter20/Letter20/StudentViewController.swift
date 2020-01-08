@@ -16,7 +16,6 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
     @IBOutlet weak var ageTF: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var guardarBtn: UIBarButtonItem!
-    var student : NSManagedObject!
     var clase : NSManagedObject!
     
     override func viewDidLoad() {
@@ -24,14 +23,7 @@ class StudentViewController: UIViewController, UITextFieldDelegate,  UIImagePick
         nameTF.delegate = self
         ageTF.delegate = self
         imageView.makeRounded()
-        if student == nil{
-            guardarBtn.isEnabled = false
-        }else{
-            guardarBtn.isEnabled = true
-            nameTF.text = student.value(forKey: "nombreAlumno") as? String
-            //imageView.image = student?.imageS
-            //ageTF.text = student?.ageS
-        }
+        guardarBtn.isEnabled = false
     }
     
     

@@ -140,6 +140,7 @@ class StatsTableViewController: UITableViewController {
                 letters.append(char)
             }
         }
+        
     }
     
 }

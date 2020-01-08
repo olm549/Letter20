@@ -14,19 +14,25 @@ class StatsChartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        titulos.append("Aciertos")
-        titulos.append("Fallos")
+        inicializarArrays()
         cargarDatos()
-        setChart(dataPoints: titulos, values: valores)
+        setChart(values: valores)
+        
     }
     @IBOutlet weak var pieChartView: PieChartView!
-    var titulos = [String]()
     var valores = [Int]()
     var resultados = [NSManagedObject]()
     var alumno: NSManagedObject!
     var letter : Character!
+    @IBOutlet weak var nombreAlumno: UILabel!
+    @IBOutlet weak var edadAlumno: UILabel!
+    @IBOutlet weak var experimentosAlumno: UILabel!
+    @IBOutlet weak var avanceAlumno: UILabel!
+    @IBOutlet weak var imagenAlumno: UIImageView!
+    @IBOutlet weak var statsLabel: UILabel!
+    @IBOutlet weak var nombreLabel: UILabel!
+    @IBOutlet weak var edadLabel: UILabel!
     
-
     /*
     // MARK: - Navigation
 
@@ -56,8 +62,8 @@ class StatsChartViewController: UIViewController {
             }
             
         }else{
-            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Alumno")
-            fetchRequest.predicate = NSPredicate(format: "Alumno == %@", alumno)
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Experimento")
+            fetchRequest.predicate = NSPredicate(format: "alumnoExperimento == %@", alumno)
             do {
                 resultados = try managedContext.fetch(fetchRequest)
             } catch let error as NSError {
@@ -65,10 +71,9 @@ class StatsChartViewController: UIViewController {
             }
         }
         filtrarDatos()
+        cargarInterfaz()
     }
     func filtrarDatos(){
-        
-        if(letter != nil){
             var contador : Int = 0
             let temp = resultados as! [Experimento]
             for experimento in temp {
@@ -76,12 +81,56 @@ class StatsChartViewController: UIViewController {
                     contador = contador + 1
                 }
             }
-            valores.append(contador)
-            valores.append(temp.count-contador)
-        }
+            valores[0] = contador
+            valores[1] = temp.count-contador
     }
-    func setChart(dataPoints: [String], values: [Int]) {
+    func setChart(values: [Int]) {
         pieChartView.noDataText = "No hay datos"
+        pieChartView.chartDescription.text = "Porcentaje de aciertos"
+        pieChartView.chartDescription.font = UIFont(name:"futura",size:12)!
+        pieChartView.holeColor = UIColor.clear
+        pieChartView.legend.drawInside = true
+        let entry1 = PieChartDataEntry(value:Double(valores[0]), label:"Aciertos")
+        let entry2 = PieChartDataEntry(value: Double(valores[1]), label:"Fallos")
+        let pieChartDataSet=PieChartDataSet(values:[entry1,entry2],label:"")
+        pieChartDataSet.colors = ChartColorTemplates.pastel()
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        pieChartView.data = pieChartData
         
+    }
+    func inicializarArrays(){
+        valores.append(0)
+        valores.append(0)
+    }
+    func cargarInterfaz(){
+        if(letter == nil){
+            nombreAlumno.text = alumno.value(forKey: "nombreAlumno") as? String
+            edadAlumno.text = String(alumno.value(forKey: "edadAlumno") as! Int)
+            if let imageData = alumno.value(forKey: "fotoAlumno") as? Data{
+                let image = UIImage(data : imageData)
+                imagenAlumno.image = image
+                imagenAlumno.makeRounded()
+            }
+            experimentosAlumno.text = "El alumno ha realizado \(resultados.count) experimentos"
+            if(valores[0]>valores[1]){
+                avanceAlumno.text = "El avance es positivo"
+            }else{
+                avanceAlumno.text = "El avance es negativo"
+            }
+        }
+        else{
+            statsLabel.text = "Estadísticas de letra"
+            nombreLabel.text = "Estadísticas para la Letra: '\(String(letter))'"
+            edadLabel.text = "Se han realizado \(resultados.count) experimentos"
+            if(valores[0]>valores[1]){
+                experimentosAlumno.text = "El recuento es positivo"
+            }else{
+                experimentosAlumno.text = "El recuento es negativo"
+            }
+            nombreAlumno.isHidden = true
+            edadAlumno.isHidden = true
+            avanceAlumno.isHidden = true
+            imagenAlumno.isHidden = true
+        }
     }
 }
