@@ -17,6 +17,7 @@ class LetrasTableViewController: UITableViewController {
         let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         for char in letras{
             letters.append(char)
+
         }
     }
     //MARK: Atributos

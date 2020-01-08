@@ -989,7 +989,7 @@
                                     <outlet property="ageS" destination="uSu-BC-zia" id="1MP-c9-pxf"/>
                                     <outlet property="imageS" destination="nso-3X-3jY" id="ozi-tl-KoG"/>
                                     <outlet property="nameS" destination="Bdh-lK-PQ6" id="V1g-Zj-IJs"/>
-                                    <segue destination="aaX-Nj-u7w" kind="show" identifier="wasAStudent" id="LHq-Gt-9jF"/>
+                                    <segue destination="aaX-Nj-u7w" kind="show" identifier="isAStudent" id="LHq-Gt-9jF"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LetraTableViewCell" rowHeight="55" id="Hnn-Yz-iLO" customClass="LetraTableViewCell" customModule="Letter20" customModuleProvider="target">
@@ -1010,7 +1010,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelLetra" destination="l4h-Gb-8QP" id="Pre-SL-VKx"/>
-                                    <segue destination="aaX-Nj-u7w" kind="show" identifier="wasALetter" id="nJH-pL-uXA"/>
+                                    <segue destination="aaX-Nj-u7w" kind="show" identifier="isALetter" id="nJH-pL-uXA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1025,20 +1025,30 @@
             </objects>
             <point key="canvasLocation" x="4711" y="1642"/>
         </scene>
-        <!--View Controller-->
+        <!--Stats Chart View Controller-->
         <scene sceneID="Maw-tH-c14">
             <objects>
-                <viewController id="aaX-Nj-u7w" sceneMemberID="viewController">
+                <viewController id="aaX-Nj-u7w" customClass="StatsChartViewController" customModule="Letter20" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JUP-6N-VfE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7M-ac-ARV" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="67" y="131" width="240" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z2N-wG-UxC"/>
                     </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="H7M-ac-ARV" id="74V-SP-zhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6t-YE-IyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5615" y="1645"/>
+            <point key="canvasLocation" x="5613.6000000000004" y="1644.8275862068967"/>
         </scene>
         <!--Clases-->
         <scene sceneID="ymc-Ij-Mcz">
@@ -1194,6 +1204,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nJH-pL-uXA"/>
-        <segue reference="l8u-fw-gIZ"/>
+        <segue reference="sMF-lI-Rfh"/>
     </inferredMetricsTieBreakers>
 </document>

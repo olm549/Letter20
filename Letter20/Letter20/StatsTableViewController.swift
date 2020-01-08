@@ -13,18 +13,11 @@ class StatsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(tipo == "alumnos"){
-        }
         cargarResultados()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     var resultados = [NSManagedObject]()
     var tipo : String!
+    var letters = [Character]()
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +32,11 @@ class StatsTableViewController: UITableViewController {
         }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultados.count
+        if(tipo == "letras"){
+            return letters.count
+        }else{
+            return resultados.count
+        }
     }
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,11 +52,6 @@ class StatsTableViewController: UITableViewController {
             }
         }
         if(tipo == "letras"){
-            var letters = [Character]()
-            let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            for char in letras{
-                letters.append(char)
-            }
             let cell = tableView.dequeueReusableCell(withIdentifier: "LetraTableViewCell", for: indexPath) as! LetraTableViewCell
             cell.labelLetra.text = "Letra \(String(letters[indexPath.row]))"
             return cell
@@ -105,15 +97,24 @@ class StatsTableViewController: UITableViewController {
      }
      */
     
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            let selectedRow = indexPath.row
+            let segueDestino = segue.destination as! StatsChartViewController
+            if(segue.identifier == "isAStudent"){
+                segueDestino.alumno = resultados[selectedRow]
+            }
+            if(segue.identifier == "isALetter"){
+                segueDestino.letter = self.letters[selectedRow]
+                
+            }
+        }
      }
-     */
+    
     func cargarResultados(){
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -134,15 +135,11 @@ class StatsTableViewController: UITableViewController {
         
         }
         if(tipo == "letras"){
-            
-           let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Experimento")
-            do {
-                resultados = try managedContext.fetch(fetchRequest)
-            } catch let error as NSError {
-                print("Could not fetch. \(error), \(error.userInfo)")
+            let letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            for char in letras{
+                letters.append(char)
             }
         }
-
     }
     
 }
