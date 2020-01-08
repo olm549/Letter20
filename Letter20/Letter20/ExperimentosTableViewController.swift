@@ -69,6 +69,9 @@ class ExperimentosTableViewController: UITableViewController {
         }
         return cell
     }
+    override func tableView (_ tableView: UITableView,
+                             titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) ->
+        String? { return "Eliminar" }
 
     /*
     // Override to support conditional editing of the table view.

@@ -23,6 +23,8 @@
 		29A5BFB623A95A140089D178 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */; };
 		29AC27CB23ACC7E6000BBF84 /* Letter20.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27C923ACC7E6000BBF84 /* Letter20.xcdatamodeld */; };
 		29AC27CD23ACD4DF000BBF84 /* AniadirProfesorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */; };
+		29B9E15623C5FA500096A28F /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9E15523C5FA500096A28F /* StatsViewController.swift */; };
+		29B9E15723C5FA530096A28F /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B9E15523C5FA500096A28F /* StatsViewController.swift */; };
 		29BE70C923C4FAB70080BC96 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA123A933D10089D178 /* MenuViewController.swift */; };
 		29BE70CA23C4FAB70080BC96 /* AniadirClaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A5BFA723A94D110089D178 /* AniadirClaseViewController.swift */; };
 		29BE70CB23C4FAB70080BC96 /* ExperimentosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295D8B6F23C4A51E0059560A /* ExperimentosTableViewCell.swift */; };
@@ -79,6 +81,7 @@
 		29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassTableViewCell.swift; path = ../ClassTableViewCell.swift; sourceTree = "<group>"; };
 		29AC27CA23ACC7E6000BBF84 /* Letter20.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Letter20.xcdatamodel; sourceTree = "<group>"; };
 		29AC27CC23ACD4DF000BBF84 /* AniadirProfesorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniadirProfesorViewController.swift; sourceTree = "<group>"; };
+		29B9E15523C5FA500096A28F /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		29BE70E423C4FAB70080BC96 /* Letter20v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letter20v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BE70E523C4FAB70080BC96 /* Letter20 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Letter20 copy-Info.plist"; path = "/Users/aula11/Documents/Letter20/Letter20/Letter20 copy-Info.plist"; sourceTree = "<absolute>"; };
 		29C21227239FEFE6005F1FD8 /* LoginPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUpController.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		29D1C31D2396CC2E0081E837 /* Letter20 */ = {
 			isa = PBXGroup;
 			children = (
+				29B9E15523C5FA500096A28F /* StatsViewController.swift */,
 				295D8B6F23C4A51E0059560A /* ExperimentosTableViewCell.swift */,
 				29A5BFB523A95A140089D178 /* ClassTableViewCell.swift */,
 				29A5BFAF23A9545B0089D178 /* StudentsTableViewCell.swift */,
@@ -333,6 +337,7 @@
 				29BE70D923C4FAB70080BC96 /* AniadirExperimentoViewController.swift in Sources */,
 				29BE70DA23C4FAB70080BC96 /* ResultadoExperimentoViewController.swift in Sources */,
 				29BE70DB23C4FAB70080BC96 /* LetraTableViewCell.swift in Sources */,
+				29B9E15723C5FA530096A28F /* StatsViewController.swift in Sources */,
 				29BE70DC23C4FAB70080BC96 /* StudentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +364,7 @@
 				295D8B7423C4B02D0059560A /* AniadirExperimentoViewController.swift in Sources */,
 				295D8B7623C4B2710059560A /* ResultadoExperimentoViewController.swift in Sources */,
 				295D8B6E23C4A0470059560A /* LetraTableViewCell.swift in Sources */,
+				29B9E15623C5FA500096A28F /* StatsViewController.swift in Sources */,
 				29A5BFB423A954A80089D178 /* StudentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,15 @@ class IndexViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        #if Letter20v2
+            labelVersion.text = "v2.03"
+        #else
+            labelVersion.text = "v1.39"
+        #endif
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBOutlet weak var labelVersion: UILabel!
     @IBOutlet weak var signIcon: UIImageView!
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!

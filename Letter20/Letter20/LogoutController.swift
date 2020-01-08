@@ -22,6 +22,7 @@ class LogoutController: UIViewController {
         salirButton.layer.borderWidth = 2
         signText.layer.borderColor = UIColor.black.cgColor
         signText.layer.borderWidth = 2
+        signText.layer.cornerRadius = signText.frame.height / 4
         view?.backgroundColor = UIColor(white: 0, alpha: 0.5)
     }
     

@@ -20,6 +20,11 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         picker.layer.borderColor = UIColor.black.cgColor
         picker.layer.borderWidth = 2
         picker.layer.backgroundColor = UIColor.orange.withAlphaComponent(0.4).cgColor
+        #if Letter20v2
+            letraAdivinada.isHidden = true
+            labelLetraAdivinada.isHidden = true
+        #endif
+        
         // Do any additional setup after loading the view.
     }
     // MARK: Atributos
@@ -28,6 +33,7 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
     var letter : Character!
     var fieldValue : Int!
 
+    @IBOutlet weak var labelLetraAdivinada: UILabel!
     @IBOutlet weak var x2barText: UITextField!
     @IBOutlet weak var y2barText: UITextField!
     @IBOutlet weak var x2ybrText: UITextField!
@@ -112,9 +118,12 @@ class AniadirExperimentoViewController: UIViewController, UIPickerViewDelegate, 
         let segueDestino = segue.destination as! ResultadoExperimentoViewController
         segueDestino.letter = letter
         segueDestino.student = student
+        #if Letter20v2
+        segueDestino.guessedLetter = "A"
+        #else
         segueDestino.guessedLetter = Character(letraAdivinada.text!)
             //segueDestino.profesorClase = [profesor : self.classes[selectedRow]]
-
+        #endif
     }
     
     @IBAction func sendTag(_ sender: UITextField) {

@@ -14,7 +14,6 @@ class ClassTableViewController: UITableViewController {
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         super.viewDidLoad()
-        tableView.rowHeight = 90
         cargarClases()
     }
     var classes = [NSManagedObject]()
