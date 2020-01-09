@@ -52,8 +52,14 @@ class ClassTableViewController: UITableViewController {
             let managedContext =
                 appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Clase")
-            fetchRequest.predicate = NSPredicate(format: "profesor == %@", (profesor))
+            fetchRequest.predicate = NSPredicate(format: "profesorClase == %@", (profesor))
             do{
+                let fetchRequestAlumno = NSFetchRequest<NSFetchRequestResult>(entityName: "Alumno")
+                fetchRequestAlumno.predicate = NSPredicate(format: "claseAlumno == %@", (classes[indexPath.row]))
+                let fetch = try managedContext.fetch(fetchRequestAlumno) as! [NSManagedObject]
+                for alumno in fetch{
+                        managedContext.delete(alumno)
+                }
                 let test = try managedContext.fetch(fetchRequest)
                 let objectToDelete = test[indexPath.row] as! NSManagedObject
                 managedContext.delete(objectToDelete)
