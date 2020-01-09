@@ -86,12 +86,12 @@ class StatsChartViewController: UIViewController {
     }
     func setChart(values: [Int]) {
         pieChartView.noDataText = "No hay datos"
-        pieChartView.chartDescription.text = "Porcentaje de aciertos"
+        pieChartView.chartDescription.text = "Relación de aciertos"
         pieChartView.chartDescription.font = UIFont(name:"futura",size:12)!
         pieChartView.holeColor = UIColor.clear
         pieChartView.legend.drawInside = true
         let entry1 = PieChartDataEntry(value:Double(valores[0]), label:"Aciertos")
-        let entry2 = PieChartDataEntry(value: Double(valores[1]), label:"Fallos")
+        let entry2 = PieChartDataEntry(value: Double(valores[1]), label:"Errores")
         let pieChartDataSet=PieChartDataSet(values:[entry1,entry2],label:"")
         //pieChartDataSet.colors = ChartColorTemplates.pastel()
         pieChartDataSet.colors = [UIColor(cgColor:#colorLiteral(red: 0.360766773, green: 0.7639593909, blue: 0.4255178932, alpha: 1)) , UIColor(cgColor: #colorLiteral(red: 0.9850491751, green: 0.33067684, blue: 0.2709089689, alpha: 1))]
@@ -128,9 +128,13 @@ class StatsChartViewController: UIViewController {
             }else{
                 experimentosAlumno.text = "El recuento es negativo"
             }
+            if(valores[0] == 0 && valores[1] == 0){
+                avanceAlumno.isHidden = true
+            }else{
+            avanceAlumno.text = "Acertada el \(round(Double(valores[0])/Double(valores[0]+valores[1]) * 100))% de los intentos"
+            }
             nombreAlumno.isHidden = true
             edadAlumno.isHidden = true
-            avanceAlumno.isHidden = true
             imagenAlumno.isHidden = true
         }
     }
