@@ -14,10 +14,14 @@ class AniadirProfesorViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             view?.backgroundColor = UIColor(white: 0, alpha: 0.5)
+            signText.layer.borderColor = UIColor.black.cgColor
+            signText.layer.borderWidth = 2
+            signText.layer.cornerRadius = signText.frame.height / 4
             
             // Do any additional setup after loading the view.
         }
         
+        @IBOutlet weak var signText: UILabel!
         @IBOutlet weak var nombreTxt: UITextField!
         @IBOutlet weak var contraseniaTxt: UITextField!
         @IBOutlet weak var cancelButton: UIButton!

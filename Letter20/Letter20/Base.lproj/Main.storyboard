@@ -166,7 +166,7 @@
             </objects>
             <point key="canvasLocation" x="990" y="3215"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Menú-->
         <scene sceneID="4cO-Ei-Mg8">
             <objects>
                 <viewController id="jGM-e4-cCE" customClass="MenuViewController" customModule="Letter20" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,10 +235,14 @@
                         <color key="backgroundColor" red="0.99607843139999996" green="1" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Gja-rF-4Ti"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Menú" id="eYR-Vr-4ch"/>
                     <connections>
                         <outlet property="ClasesBtn" destination="ed8-AJ-a6y" id="zZT-qG-Z8w"/>
                         <outlet property="EstadisticasBtn" destination="TqU-vN-Nui" id="6bh-uo-t8Y"/>
                         <outlet property="SalirBtn" destination="SHg-y6-Xgw" id="eT2-c0-CGp"/>
+                        <outlet property="imagenClases" destination="75i-dt-Eay" id="bkN-Kq-IOZ"/>
+                        <outlet property="imagenLogout" destination="RHt-Ov-2Fp" id="gKL-Os-iOe"/>
+                        <outlet property="imagenStats" destination="XLs-CF-CeV" id="09u-nO-AI0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Y3-DK-YGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,6 +371,7 @@
                         <outlet property="cancelButton" destination="CXa-de-gBC" id="YcH-Dj-iDA"/>
                         <outlet property="guardarButton" destination="DQv-li-ouX" id="AOx-8j-jOs"/>
                         <outlet property="nombreTxt" destination="QYb-Fb-Cv3" id="9rh-d2-kHy"/>
+                        <outlet property="signText" destination="Epp-mR-tpl" id="Ps0-kC-Gm2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4V-Ff-16h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -957,6 +962,12 @@
                         <viewLayoutGuide key="safeArea" id="GBH-Jk-6Ib"/>
                     </view>
                     <navigationItem key="navigationItem" title="Estadísticas" id="LLv-E8-5Oe"/>
+                    <connections>
+                        <outlet property="alumnosButton" destination="i3I-zc-ijI" id="zpQ-mI-t0b"/>
+                        <outlet property="imgAlumnos" destination="GVu-7X-Lr8" id="VkI-bb-hUZ"/>
+                        <outlet property="imgLetras" destination="iKD-MX-B6a" id="pdY-nH-OJk"/>
+                        <outlet property="letrasButton" destination="aBz-96-3Hp" id="LDB-wR-J3X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nq9-M0-48C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1199,7 +1210,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduzca las credenciales para el nuevo profesor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXQ-qR-46e">
-                                        <rect key="frame" x="-9" y="8" width="343" height="84"/>
+                                        <rect key="frame" x="34" y="20" width="257" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1255,12 +1266,13 @@
                         <outlet property="contraseniaTxt" destination="lUd-z2-Olm" id="bqa-Vc-aij"/>
                         <outlet property="guardarButton" destination="zgY-pi-LOc" id="lys-t3-ypZ"/>
                         <outlet property="nombreTxt" destination="IiE-H4-bKp" id="d2o-4r-BMJ"/>
+                        <outlet property="signText" destination="GXQ-qR-46e" id="hHL-Rx-P4J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJe-26-70x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Lqx-cZ-qEj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="3234"/>
+            <point key="canvasLocation" x="1888.8" y="3233.4332833583212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pu7-db-zYt">

@@ -16,20 +16,22 @@ class MenuViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        ClasesBtn.layer.borderColor = UIColor.black.cgColor
-        ClasesBtn.layer.borderWidth = 4
-        EstadisticasBtn.layer.borderColor = UIColor.black.cgColor
-        EstadisticasBtn.layer.borderWidth = 4
-        SalirBtn.layer.borderColor = UIColor.black.cgColor
-        SalirBtn.layer.borderWidth = 4
+        ClasesBtn.layer.fixIconSize()
+        imagenClases.layer.cornerRadius = imagenClases.frame.height / 4
+        imagenClases.clipsToBounds = true
+        EstadisticasBtn.layer.fixIconSize()
+        imagenStats.layer.fixIconSize()
+        imagenStats.clipsToBounds = true
+        SalirBtn.layer.fixIconSize()
+        imagenLogout.layer.fixIconSize()
+        imagenLogout.clipsToBounds = true
         
         // Do any additional setup after loading the view.
     }
     
-    //color amarillo FFF3D1
-    //color fondo azul A9D0F4
-    //color navigationbar 4165E7
-    
+    @IBOutlet weak var imagenLogout: UIImageView!
+    @IBOutlet weak var imagenClases: UIImageView!
+    @IBOutlet weak var imagenStats: UIImageView!
     @IBOutlet weak var ClasesBtn: UIButton!
     @IBOutlet weak var EstadisticasBtn: UIButton!
     @IBOutlet weak var SalirBtn: UIButton!
@@ -44,5 +46,17 @@ class MenuViewController: UIViewController {
             segueDestino.profesor = profesor
         }
      }
+    
+   
+}
+
+extension CALayer {
+   
+    func fixIconSize(){
+        self.masksToBounds = false
+        self.borderWidth = 4
+        self.borderColor = UIColor.black.cgColor
+        self.cornerRadius = self.frame.height / 4
+    }
     
 }

@@ -14,10 +14,14 @@ class AniadirClaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        signText.layer.borderWidth = 2
+        signText.layer.borderColor = UIColor.black.cgColor
+        signText.layer.cornerRadius = signText.frame.height / 4
 
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var signText: UILabel!
     @IBOutlet weak var nombreTxt: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var guardarButton: UIButton!
