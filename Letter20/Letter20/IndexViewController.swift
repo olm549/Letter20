@@ -13,9 +13,12 @@ class IndexViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
+        animate()
+        
+   }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         #if Letter20v2
             labelVersion.text = "v2.03"
         #else
@@ -24,6 +27,7 @@ class IndexViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBOutlet weak var logoApp: UIImageView!
     @IBOutlet weak var labelVersion: UILabel!
     @IBOutlet weak var signIcon: UIImageView!
     @IBOutlet weak var userNameField: UITextField!
@@ -87,6 +91,20 @@ class IndexViewController: UIViewController {
                 segueDestino.profesor = usuario
             }
         }
+    
+    func animate(){
+        userNameField.frame.origin.x += view.bounds.width
+        passwordField.frame.origin.x -= view.bounds.width
+        UIView.animate(withDuration: 0.7,
+                       delay: 0.0,
+                       options: [],
+                       animations: {
+                        self.userNameField.frame.origin.x -= self.view.bounds.width
+                        self.passwordField.frame.origin.x += self.view.bounds.width
+                        
+        },
+                       completion: nil)
+    }
     
 }
 

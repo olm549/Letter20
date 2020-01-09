@@ -14,13 +14,18 @@ class AniadirClaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        signAlert.layer.fixIconSize()
+        signAlert.layer.borderWidth = 2
         signText.layer.borderWidth = 2
         signText.layer.borderColor = UIColor.black.cgColor
         signText.layer.cornerRadius = signText.frame.height / 4
+        guardarButton.isEnabled = false
+        guardarButton.alpha = 0.5;
 
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var signAlert: UIView!
     @IBOutlet weak var signText: UILabel!
     @IBOutlet weak var nombreTxt: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
@@ -58,5 +63,9 @@ class AniadirClaseViewController: UIViewController {
         }
         
     }
-
+    @IBAction func finEdicion(_ sender: UITextField) {
+        guardarButton.isEnabled = true
+        guardarButton.alpha = 1;
+    }
+    
 }

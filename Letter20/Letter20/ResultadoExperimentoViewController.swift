@@ -11,6 +11,9 @@ import CoreData
 
 class ResultadoExperimentoViewController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        animate()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         letraEsperada.layer.borderColor = UIColor.black.cgColor
@@ -61,5 +64,26 @@ class ResultadoExperimentoViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+    
+    func animate(){
+        letraEsperada.frame.origin.x += self.view.bounds.width
+        letraReconocida.frame.origin.x += self.view.bounds.width
+        UIView.animate(withDuration: 0.3,
+                       delay: 0.3,
+                       options: [],
+                       animations: {
+                        self.letraEsperada.frame.origin.x -= self.view.bounds.width
+                        
+            },
+                       completion: nil)
+        UIView.animate(withDuration: 0.3,
+                       delay: 0.6,
+                       options: [],
+                       animations: {
+                        self.letraReconocida.frame.origin.x -= self.view.bounds.width
+                        
+            },
+                       completion: nil)
     }
 }

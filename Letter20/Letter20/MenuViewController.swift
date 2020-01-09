@@ -13,6 +13,7 @@ class MenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        animate()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +47,41 @@ class MenuViewController: UIViewController {
             segueDestino.profesor = profesor
         }
      }
-    
-   
+    func animate(){
+        ClasesBtn.frame.origin.x += view.bounds.width
+        imagenClases.frame.origin.x += view.bounds.width
+        EstadisticasBtn.frame.origin.x += view.bounds.width
+        imagenStats.frame.origin.x += view.bounds.width
+        SalirBtn.frame.origin.x += view.bounds.width
+        imagenLogout.frame.origin.x += view.bounds.width
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.2,
+                       options: [],
+                       animations: {
+                        self.ClasesBtn.frame.origin.x -= self.view.bounds.width
+                        self.imagenClases.frame.origin.x -= self.view.bounds.width
+                        
+        },
+                       completion: nil)
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.4,
+                       options: [],
+                       animations: {
+                        self.EstadisticasBtn.frame.origin.x -= self.view.bounds.width
+                        self.imagenStats.frame.origin.x -= self.view.bounds.width
+                        
+        },
+                       completion: nil)
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.6,
+                       options: [],
+                       animations: {
+                        self.SalirBtn.frame.origin.x -= self.view.bounds.width
+                        self.imagenLogout.frame.origin.x -= self.view.bounds.width
+                        
+        },
+                       completion: nil)
+    }
 }
 
 extension CALayer {

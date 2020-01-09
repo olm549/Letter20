@@ -14,13 +14,14 @@ class AniadirProfesorViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             view?.backgroundColor = UIColor(white: 0, alpha: 0.5)
-            signText.layer.borderColor = UIColor.black.cgColor
-            signText.layer.borderWidth = 2
-            signText.layer.cornerRadius = signText.frame.height / 4
-            
+            signAlert.layer.fixIconSize()
+            signAlert.layer.borderWidth = 2
+            guardarButton.isEnabled = false
+            guardarButton.alpha = 0.5;
             // Do any additional setup after loading the view.
         }
         
+        @IBOutlet weak var signAlert: UIView!
         @IBOutlet weak var signText: UILabel!
         @IBOutlet weak var nombreTxt: UITextField!
         @IBOutlet weak var contraseniaTxt: UITextField!
@@ -61,5 +62,12 @@ class AniadirProfesorViewController: UIViewController {
                 print("Could not save. \(error), \(error.userInfo)")
             }
         }
+    
+    @IBAction func finCreacion(_ sender: UITextField) {
+        if !nombreTxt.text!.isEmpty && !contraseniaTxt.text!.isEmpty{
+            guardarButton.isEnabled = true
+            guardarButton.alpha = 1;
+        }
+    }
         
 }

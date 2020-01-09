@@ -10,6 +10,9 @@ import UIKit
 
 class StatsViewController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        animate()
+    }
     override func viewDidLoad() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         super.viewDidLoad()
@@ -39,5 +42,28 @@ class StatsViewController: UIViewController {
             segueDestino.tipo = "alumnos"
         }
     }
-
+    func animate(){
+        imgAlumnos.frame.origin.x += view.bounds.width
+        imgLetras.frame.origin.x += view.bounds.width
+        alumnosButton.frame.origin.x += view.bounds.width
+        letrasButton.frame.origin.x += view.bounds.width
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.2,
+                       options: [],
+                       animations: {
+                        self.imgAlumnos.frame.origin.x -= self.view.bounds.width
+                        self.alumnosButton.frame.origin.x -= self.view.bounds.width
+                        
+        },
+                       completion: nil)
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.4,
+                       options: [],
+                       animations: {
+                        self.imgLetras.frame.origin.x -= self.view.bounds.width
+                        self.letrasButton.frame.origin.x -= self.view.bounds.width
+                        
+        },
+                       completion: nil)
+    }
 }

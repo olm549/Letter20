@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v 1.39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wnd-lA-GaH">
-                                <rect key="frame" x="178" y="639" width="61" height="22"/>
+                                <rect key="frame" x="164" y="639" width="61" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,6 +102,7 @@
                     <navigationItem key="navigationItem" id="kBa-fY-IKQ"/>
                     <connections>
                         <outlet property="labelVersion" destination="Wnd-lA-GaH" id="IJu-yi-sBB"/>
+                        <outlet property="logoApp" destination="npi-bi-ZsA" id="pE6-o8-NiC"/>
                         <outlet property="passwordField" destination="ou3-Nz-ZPW" id="WDe-VN-VcN"/>
                         <outlet property="signIcon" destination="8hT-uQ-2E8" id="mI1-FS-cyk"/>
                         <outlet property="userNameField" destination="6Nk-tG-ao6" id="A56-3a-PEa"/>
@@ -317,13 +318,6 @@
                                 <rect key="frame" x="32" y="214" width="319" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la nueva clase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Epp-mR-tpl">
-                                        <rect key="frame" x="61" y="15" width="197" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DQv-li-ouX">
                                         <rect key="frame" x="199" y="140" width="92" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -336,12 +330,15 @@
                                             <segue destination="uHh-fH-Moh" kind="unwind" unwindAction="addNuevaClaseWithSender:" id="hGr-ii-nWP"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="QYb-Fb-Cv3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce el nombre la clase" textAlignment="natural" minimumFontSize="17" id="QYb-Fb-Cv3">
                                         <rect key="frame" x="34" y="88" width="257" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="finEdicion:" destination="g3e-lk-msh" eventType="editingChanged" id="qE7-ao-qKk"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CXa-de-gBC">
                                         <rect key="frame" x="34" y="140" width="92" height="34"/>
@@ -355,6 +352,13 @@
                                             <action selector="cancelar:" destination="g3e-lk-msh" eventType="touchUpInside" id="Cn2-Dt-LDL"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de la nueva clase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Epp-mR-tpl">
+                                        <rect key="frame" x="44" y="21" width="230" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.8980392157" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -365,13 +369,14 @@
                         <outlet property="cancelButton" destination="CXa-de-gBC" id="YcH-Dj-iDA"/>
                         <outlet property="guardarButton" destination="DQv-li-ouX" id="AOx-8j-jOs"/>
                         <outlet property="nombreTxt" destination="QYb-Fb-Cv3" id="9rh-d2-kHy"/>
+                        <outlet property="signAlert" destination="aTK-Yh-UGc" id="Mcl-1J-iri"/>
                         <outlet property="signText" destination="Epp-mR-tpl" id="Ps0-kC-Gm2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4V-Ff-16h" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uHh-fH-Moh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2383" y="3573"/>
+            <point key="canvasLocation" x="2381.5999999999999" y="3572.5637181409297"/>
         </scene>
         <!--Añadir Alumno-->
         <scene sceneID="uUZ-p4-GJo">
@@ -388,7 +393,7 @@
                                 <color key="textColor" red="0.43529411759999997" green="0.6588235294" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9hc-WE-oAQ">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce el nombre del alumno" textAlignment="natural" minimumFontSize="17" id="9hc-WE-oAQ">
                                 <rect key="frame" x="54" y="174" width="266" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -402,7 +407,7 @@
                                 <color key="textColor" red="0.43529411759999997" green="0.6588235294" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="QtM-Qr-pJN">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce su edad" textAlignment="natural" minimumFontSize="17" id="QtM-Qr-pJN">
                                 <rect key="frame" x="54" y="268" width="266" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -468,7 +473,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OVA-8c-vSl">
-                                            <rect key="frame" x="29" y="11" width="58" height="57"/>
+                                            <rect key="frame" x="25" y="11" width="62" height="57"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dZV-Ev-k5k">
@@ -518,7 +523,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boU-6x-19J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3073" y="2683"/>
+            <point key="canvasLocation" x="3072.8000000000002" y="2682.9085457271367"/>
         </scene>
         <!--Letras-->
         <scene sceneID="EoQ-v3-XOX">
@@ -641,7 +646,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="xbn-aT-GiD">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="xbn-aT-GiD">
                                 <rect key="frame" x="42" y="180" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -651,7 +656,7 @@
                                     <action selector="sendTag:" destination="23e-h0-ZIf" eventType="editingDidBegin" id="tku-wv-f5t"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="G6g-rh-04l">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="G6g-rh-04l">
                                 <rect key="frame" x="223" y="180" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -675,7 +680,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="rLH-fb-0dR">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="rLH-fb-0dR">
                                 <rect key="frame" x="42" y="281" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -685,7 +690,7 @@
                                     <action selector="sendTag:" destination="23e-h0-ZIf" eventType="editingDidBegin" id="yJp-Ch-IED"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="BIZ-G0-LFV">
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="BIZ-G0-LFV">
                                 <rect key="frame" x="223" y="281" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -709,7 +714,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="47a-Ky-1ap">
+                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="47a-Ky-1ap">
                                 <rect key="frame" x="42" y="391" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -719,7 +724,7 @@
                                     <action selector="sendTag:" destination="23e-h0-ZIf" eventType="editingDidBegin" id="ohy-4x-CPd"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="UI5-YH-fxO">
+                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="natural" minimumFontSize="17" id="UI5-YH-fxO">
                                 <rect key="frame" x="223" y="391" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -743,7 +748,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="aiG-Sg-WcQ">
+                            <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="aiG-Sg-WcQ">
                                 <rect key="frame" x="42" y="505" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -753,7 +758,7 @@
                                     <action selector="sendTag:" destination="23e-h0-ZIf" eventType="editingDidBegin" id="g57-yY-2n1"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Wq3-R0-2fX">
+                            <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="Wq3-R0-2fX">
                                 <rect key="frame" x="223" y="505" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -770,7 +775,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Ex6-sH-KSh">
+                            <textField opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-15" textAlignment="center" minimumFontSize="17" id="Ex6-sH-KSh">
                                 <rect key="frame" x="42" y="601" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -787,7 +792,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="lni-Mu-zad">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A-Z" textAlignment="center" minimumFontSize="17" id="lni-Mu-zad">
                                 <rect key="frame" x="223" y="601" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -1217,12 +1222,15 @@
                                             <segue destination="Lqx-cZ-qEj" kind="unwind" unwindAction="addNewProfesorWithSender:" id="zCM-GG-QqI"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" id="IiE-H4-bKp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce el usuario" textAlignment="natural" minimumFontSize="17" id="IiE-H4-bKp">
                                         <rect key="frame" x="34" y="88" width="257" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="finCreacion:" destination="ZDW-qd-Vp6" eventType="editingChanged" id="e24-HU-EwL"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KDN-Bk-rgz">
                                         <rect key="frame" x="34" y="191" width="92" height="34"/>
@@ -1236,12 +1244,15 @@
                                             <action selector="cancelar:" destination="ZDW-qd-Vp6" eventType="touchUpInside" id="F0y-OC-CfK"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" id="lUd-z2-Olm">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce la contraseña" textAlignment="natural" minimumFontSize="17" id="lUd-z2-Olm">
                                         <rect key="frame" x="34" y="139" width="257" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="finCreacion:" destination="ZDW-qd-Vp6" eventType="editingChanged" id="N85-Uq-FtA"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.8980392157" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1254,6 +1265,7 @@
                         <outlet property="contraseniaTxt" destination="lUd-z2-Olm" id="bqa-Vc-aij"/>
                         <outlet property="guardarButton" destination="zgY-pi-LOc" id="lys-t3-ypZ"/>
                         <outlet property="nombreTxt" destination="IiE-H4-bKp" id="d2o-4r-BMJ"/>
+                        <outlet property="signAlert" destination="yWn-m0-S8e" id="OZA-32-a09"/>
                         <outlet property="signText" destination="GXQ-qR-46e" id="hHL-Rx-P4J"/>
                     </connections>
                 </viewController>

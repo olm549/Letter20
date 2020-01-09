@@ -13,11 +13,8 @@ class LoginPopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        signAlert.isOpaque = false
-        signAlert.layer.masksToBounds = false
+        signAlert.layer.fixIconSize()
         signAlert.layer.borderWidth = 2
-        signAlert.layer.borderColor = UIColor.black.cgColor
-        signText.layer.cornerRadius = signText.frame.height / 4
         cancelButton.layer.borderColor = UIColor.black.cgColor
             cancelButton.layer.borderWidth = 2
         signText.layer.borderColor = UIColor.black.cgColor
