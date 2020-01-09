@@ -93,7 +93,8 @@ class StatsChartViewController: UIViewController {
         let entry1 = PieChartDataEntry(value:Double(valores[0]), label:"Aciertos")
         let entry2 = PieChartDataEntry(value: Double(valores[1]), label:"Fallos")
         let pieChartDataSet=PieChartDataSet(values:[entry1,entry2],label:"")
-        pieChartDataSet.colors = ChartColorTemplates.pastel()
+        //pieChartDataSet.colors = ChartColorTemplates.pastel()
+        pieChartDataSet.colors = [UIColor(cgColor:#colorLiteral(red: 0.360766773, green: 0.7639593909, blue: 0.4255178932, alpha: 1)) , UIColor(cgColor: #colorLiteral(red: 0.9850491751, green: 0.33067684, blue: 0.2709089689, alpha: 1))]
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         pieChartView.data = pieChartData
         
@@ -113,9 +114,9 @@ class StatsChartViewController: UIViewController {
             }
             experimentosAlumno.text = "El alumno ha realizado \(resultados.count) experimentos"
             if(valores[0]>valores[1]){
-                avanceAlumno.text = "El avance es positivo"
+                avanceAlumno.text = "Su avance es positivo"
             }else{
-                avanceAlumno.text = "El avance es negativo"
+                avanceAlumno.text = "Su avance es negativo"
             }
         }
         else{
