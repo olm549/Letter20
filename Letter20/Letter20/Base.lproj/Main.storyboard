@@ -414,7 +414,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoApp" id="Vy9-da-nVt">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconoAlumno" id="Vy9-da-nVt">
                                 <rect key="frame" x="54" y="329" width="266" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -1300,6 +1300,7 @@
     <resources>
         <image name="Alumnos" width="512" height="321"/>
         <image name="Huella" width="800" height="800"/>
+        <image name="IconoAlumno" width="320" height="280"/>
         <image name="Letras" width="320" height="180"/>
         <image name="LogoApp" width="320" height="280"/>
         <image name="fondo_aula" width="313" height="167"/>
