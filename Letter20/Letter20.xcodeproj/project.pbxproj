@@ -103,14 +103,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		29B9E18C23C608A90096A28F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 				29B9E18923C608A90096A28F /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		29B9E19423C6095A0096A28F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
